@@ -1,0 +1,42 @@
+$bg_color: #ffffff;
+
+body {
+    background-color: $bg_color;
+}
+
+.header-top{
+  text-align: center;
+  margin: 20px 0px;
+  width: 100%;
+
+  .nav-bar{
+    //width: 100%;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    position: relative;
+    min-height: 45px;
+    border-bottom: 1px solid rgb(230,230,240);
+    border-top: 1px solid rgb(230,230,240);
+    background-color: rgb(118, 205, 216);
+
+    li{
+      display: inline-block;
+      a{
+        color: white !important;
+        text-shadow: 1px 1px #000000;
+      }
+    }
+  }
+}
+
+.icon-logo{
+  text-align: center;
+  img{
+    max-width: 100%;
+  }
+}
+
+.top-bar{
+  max-width: 100%;
+  margin-top: 20px;
+}
