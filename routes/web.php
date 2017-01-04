@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/test', function () {
     return view('welcome');
 });
 
+Route::get('/', ['uses' => 'IndexController@index', 'as' => '/']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
