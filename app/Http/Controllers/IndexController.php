@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class IndexController extends Controller
 {
@@ -13,7 +14,12 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('index');
+      $posts = Post::all();
+
+      // foreach ($posts as $post) {
+      //   echo $post->body;
+      // }
+      return view('index',compact('posts'));
     }
 
     /**

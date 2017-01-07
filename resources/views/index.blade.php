@@ -3,5 +3,7 @@
 @section('title', 'Home')
 
 @section('content')
-<p> body </p>
+  @foreach ($posts as $post)
+    {{ $post->body }}
+  @endforeach
 @endsection
