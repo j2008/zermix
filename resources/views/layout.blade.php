@@ -7,6 +7,7 @@
       	<meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/app.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript" data-library="jquery" data-version="1.11.3"></script>
     </head>
     <body>
         <!-- header -->
@@ -26,7 +27,13 @@
               <li class="col-sm-2"><a href="">เกี่ยวกับ Zermix</a></li>
               <li class="col-sm-2"><a href="">ผลิตภัณฑ์</a></li>
               <li class="col-sm-2"><a href="">สถานที่จำหน่าย</a></li>
-              <li class="col-sm-2"><a href="">สาระน่ารู้</a></li>
+              <li class="col-sm-2"><a href="">สาระน่ารู้</a>
+                <ul class="sub-menu">
+                    <li class="col-sm-2"><a href="">Feature Content</a></li>
+                    <li class="col-sm-2"><a href="">PR NEWS</a></li>
+                    <li class="col-sm-2"><a href="">User Review</a></li>
+                </ul>
+              </li>
               <li class="col-sm-2"><a href="">ติดต่อเรา</a></li>
             </ul>
           </div>

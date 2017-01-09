@@ -1,7 +1,33 @@
+$nav_bar_color: #76cdd8;
 $bg_color: #ffffff;
+$hover_color: #718e98;
+$sub_menu_bg_color: rgb(74, 60, 60);
+$sub_menu_hover_color: #60aecc;
+$bottom_border_color: #e0c59d;
 
 body {
     background-color: $bg_color;
+}
+
+@keyframes opacityAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0.5; }
+  100% { opacity:1; }
+}
+@-o-keyframes opacityAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0.5; }
+  100% { opacity:1; }
+}
+@-moz-keyframes opacityAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0.5; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes opacityAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0.5; }
+  100% { opacity:1; }
 }
 
 .header-top{
@@ -10,20 +36,48 @@ body {
   width: 100%;
 
   .nav-bar{
-    //width: 100%;
-    padding: 10px 0px;
     margin: 10px 0px;
     position: relative;
     min-height: 45px;
-    border-bottom: 1px solid rgb(230,230,240);
-    border-top: 1px solid rgb(230,230,240);
-    background-color: rgb(118, 205, 216);
-
+    background-color: $nav_bar_color;
+    z-index: 1;
+    .sub-menu{
+      display: none;
+      position: absolute;
+      top: 112%;
+      li{
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background: $sub_menu_bg_color;
+        border-bottom: 5px solid $sub_menu_bg_color;
+      }
+      li:hover{
+        background-color: $sub_menu_hover_color;
+        border-bottom: 5px solid $bottom_border_color;
+      }
+    }
+    li:hover > .sub-menu{
+      display: block;
+      left: 0;
+      padding: 0;
+      text-align: center;
+      //border-radius: 0px 0px 20px 20px;
+    }
+    li:hover{
+      background-color: $hover_color;
+      border-bottom: 5px solid $bottom_border_color;
+    }
     li{
       display: inline-block;
+      height: 45px;
+      line-height: 45px;
+      border-bottom: 5px solid $nav_bar_color;
       a{
         color: white !important;
         text-shadow: 1px 1px #000000;
+        display: block;
+        text-decoration: none;
       }
     }
   }
@@ -39,4 +93,8 @@ body {
 .top-bar{
   max-width: 100%;
   margin-top: 20px;
+  -webkit-animation: opacityAnimation 2s infinite;
+  -moz-animation: opacityAnimation 2s infinite;
+  -o-animation: opacityAnimation 2s infinite;
+  animation: opacityAnimation 2s infinite;
 }
