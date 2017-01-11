@@ -1,12 +1,31 @@
+//color
 $nav_bar_color: #76cdd8;
+$html_bg_color: #f7f7f7;
 $bg_color: #ffffff;
 $hover_color: #718e98;
 $sub_menu_bg_color: rgb(74, 60, 60);
 $sub_menu_hover_color: #60aecc;
 $bottom_border_color: #e0c59d;
+$footer_border_color: #cdeff3;
+
+//dimention
+$body_max_width: 1280px;
+$mobile_menu_height: 50px;
+
+html{
+  background-color: $html_bg_color;
+}
 
 body {
     background-color: $bg_color;
+    max-width: $body_max_width;
+    margin: auto;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 0.5px 0.5px 50px 1px #e1e6e6;
+}
+
+ul{
+  margin-bottom: 0px;
 }
 
 @keyframes opacityAnimation {
@@ -32,11 +51,10 @@ body {
 
 .header-top{
   text-align: center;
-  margin: 20px 0px;
   width: 100%;
 
   .nav-bar{
-    margin: 10px 0px;
+    margin: 10px 0px 0px 0px;
     position: relative;
     min-height: 45px;
     background-color: $nav_bar_color;
@@ -44,10 +62,11 @@ body {
     .sub-menu{
       display: none;
       position: absolute;
-      top: 112%;
+      top: 100%;
+      width: 15.5%;
       li{
         width: 100%;
-        height: 40px;
+        height: 45px;
         line-height: 40px;
         background: $sub_menu_bg_color;
         border-bottom: 5px solid $sub_menu_bg_color;
@@ -59,10 +78,8 @@ body {
     }
     li:hover > .sub-menu{
       display: block;
-      left: 0;
       padding: 0;
       text-align: center;
-      //border-radius: 0px 0px 20px 20px;
     }
     li:hover{
       background-color: $hover_color;
@@ -70,6 +87,7 @@ body {
     }
     li{
       display: inline-block;
+      width: 16%;
       height: 45px;
       line-height: 45px;
       border-bottom: 5px solid $nav_bar_color;
@@ -92,9 +110,131 @@ body {
 
 .top-bar{
   max-width: 100%;
-  margin-top: 20px;
+  margin-top: 12px;
   -webkit-animation: opacityAnimation 2s infinite;
   -moz-animation: opacityAnimation 2s infinite;
   -o-animation: opacityAnimation 2s infinite;
   animation: opacityAnimation 2s infinite;
+}
+
+.footer{
+  width: 100%;
+  height: 120px;
+  margin-top: 20px;
+  .left-footer{
+    padding: 20px 0px 20px 20px;
+    width: 68%;
+    display: inline-block;
+    vertical-align: top;
+    div{
+      line-height: 15px;
+    }
+    p{
+      display: inline-block;
+    }
+    img{
+      width:15px;
+      margin: 0 5px 0 0;
+    }
+  }
+  .right-footer{
+    width: 31.5%;
+    min-width: 220px;
+    padding: 20px 20px 0px 0px;
+    display: inline-block;
+    text-align: right;
+    min-height: 120px;
+    vertical-align: top;
+    img{
+      width:200px;
+    }
+  }
+}
+
+.footer:before {
+  content : "";
+  position: absolute;
+  left    : 50%;
+  height  : 1px;
+  width   : 95%;  /* or 100px */
+  max-width : $body_max_width;
+  border-bottom:1px solid $footer_border_color;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.nav-bar-mobile{
+  height: $mobile_menu_height;
+  display: none;
+  background-color: #07b0de;
+  text-align: left;
+  img{
+    height: $mobile_menu_height;
+    left: 10px;
+    position: absolute;
+    cursor: pointer;
+  }
+}
+
+.mobile-list{
+  z-index: 1;
+  background-color: #2a3642;
+  position: relative;
+  top: $mobile_menu_height;
+  width: 70%;
+  max-width: 300px;
+  li{
+    min-height: $mobile_menu_height;
+    line-height: $mobile_menu_height;
+    a{
+      color:white;
+    }
+  }
+}
+
+.slider {
+	overflow-y: hidden;
+	max-height: 0; /* approximate max height */
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(1, 0.5, 0, 0);
+}
+
+.slider.closed {
+	max-height: 1000px;
+}
+
+@media (max-width: 768px) {
+  html{
+    background-color: $bg_color;
+  }
+  body{
+    max-width: 100%;
+    box-shadow: 0px 0px;
+    border-radius: 0px;
+  }
+  .nav-bar-mobile{
+    display: block;
+  }
+  .icon-logo img {
+    max-width: 50%;
+  }
+  .nav-bar{
+    display: none;
+  }
+  .footer{
+    text-align: center;
+    .left-footer{
+      width: 100%;
+      padding: 20px 0px 0px 0px;
+    }
+    .right-footer{
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
