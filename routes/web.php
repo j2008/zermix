@@ -16,6 +16,7 @@ Route::get('/test', function () {
 });
 
 Route::get('/', ['uses' => 'IndexController@index', 'as' => '/']);
+Route::get('/produce', ['uses' => 'ProduceController@index', 'as' => '/produce']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

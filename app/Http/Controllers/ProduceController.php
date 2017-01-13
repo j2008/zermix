@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Post;
+use TCG\Voyager\Models\Category;
 
-class IndexController extends Controller
+class ProduceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,13 @@ class IndexController extends Controller
      */
     public function index()
     {
-      return view('index');
+      $posts = Post::whereNotNull('category_id')
+               ->orderBy('id', 'desc')
+               ->take(10)
+               ->get();
+
+      $categories = Category::where('parent_id','3')->get();
+      return view('produce.index',compact('posts','categories'));
     }
 
     /**

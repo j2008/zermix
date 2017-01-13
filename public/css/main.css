@@ -168,13 +168,13 @@ ul {
   transform: translate(-50%, 0);
 }
 .nav-bar-mobile {
-  height: 50px;
+  height: 40px;
   display: none;
   background-color: #07b0de;
   text-align: left;
 }
 .nav-bar-mobile img {
-  height: 50px;
+  height: 40px;
   left: 10px;
   position: absolute;
   cursor: pointer;
@@ -183,13 +183,13 @@ ul {
   z-index: 1;
   background-color: #2a3642;
   position: relative;
-  top: 50px;
+  top: 40px;
   width: 70%;
   max-width: 300px;
 }
 .mobile-list li {
-  min-height: 50px;
-  line-height: 50px;
+  min-height: 40px;
+  line-height: 40px;
 }
 .mobile-list li a {
   color: white;

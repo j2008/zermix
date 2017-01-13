@@ -1,0 +1,42 @@
+.produce {
+  text-align: center;
+  display: none;
+}
+.produce div {
+  width: 290px;
+  height: 400px;
+  display: inline-block;
+}
+.produce div img {
+  width: 290px;
+  height: 350px;
+}
+.all-produce {
+  display: block;
+}
+.produce-list {
+  margin-top: 20px;
+}
+.produce-list ul {
+  border-bottom: 2px solid #9b9ca7;
+  padding: 0px;
+  text-align: center;
+}
+.produce-list ul li {
+  display: inline-block;
+  margin: 0% 0.1%;
+  width: 23%;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+  cursor: pointer;
+  border-top: 1px solid #e5e1ea;
+  border-left: 1px solid #e5e1ea;
+  border-right: 1px solid #e5e1ea;
+  border-radius: 10px 10px 0px 0px;
+}
+.produce-list ul .active {
+  border-top: 2px solid #9b9ca7;
+  border-left: 2px solid #9b9ca7;
+  border-right: 2px solid #9b9ca7;
+}

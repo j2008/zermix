@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <script src="js/jquery-1.11.3.min.js" type="text/javascript" data-library="jquery" data-version="1.11.3"></script>
         <script src="js/main.js" type="text/javascript" ></script>
+        @yield('header')
     </head>
     <body>
         <!-- header -->
@@ -16,18 +17,18 @@
           <div class="nav-bar-mobile">
             <img class="mobile-menu" src="img/mobile-menu.png" >
             <ul class="mobile-list slider" id="slider">
-              <li><a href="">หน้าแรก</a></li>
-              <li><a href="">เกี่ยวกับ Zermix</a></li>
-              <li><a href="">ผลิตภัณฑ์</a></li>
-              <li><a href="">สถานที่จำหน่าย</a></li>
+              <li><a href="/">หน้าแรก</a></li>
+              <li><a href="/about">เกี่ยวกับ Zermix</a></li>
+              <li><a href="/produce">ผลิตภัณฑ์</a></li>
+              <li><a href="/location">สถานที่จำหน่าย</a></li>
               <li><a href="">สาระน่ารู้</a>
                 <ul class="sub-menu">
-                    <li><a href="">Feature Content</a></li>
-                    <li><a href="">PR NEWS</a></li>
-                    <li><a href="">User Review</a></li>
+                    <li><a href="/feature">Feature Content</a></li>
+                    <li><a href="/pr">PR NEWS</a></li>
+                    <li><a href="/review">User Review</a></li>
                 </ul>
               </li>
-              <li><a href="">ติดต่อเรา</a></li>
+              <li><a href="/contact">ติดต่อเรา</a></li>
             </ul>
           </div>
           <div class="icon-logo col-sm-12">
@@ -41,18 +42,18 @@
           <img class="top-bar" src="{{ asset('img/topbar.png') }}" alt="top bar" >
           <div class="nav-bar">
             <ul>
-              <li><a href="">หน้าแรก</a></li>
-              <li><a href="">เกี่ยวกับ Zermix</a></li>
-              <li><a href="">ผลิตภัณฑ์</a></li>
-              <li><a href="">สถานที่จำหน่าย</a></li>
+              <li><a href="/">หน้าแรก</a></li>
+              <li><a href="/about">เกี่ยวกับ Zermix</a></li>
+              <li><a href="/produce">ผลิตภัณฑ์</a></li>
+              <li><a href="/location">สถานที่จำหน่าย</a></li>
               <li><a href="">สาระน่ารู้</a>
                 <ul class="sub-menu">
-                    <li><a href="">Feature Content</a></li>
-                    <li><a href="">PR NEWS</a></li>
-                    <li><a href="">User Review</a></li>
+                    <li><a href="/feature">Feature Content</a></li>
+                    <li><a href="/pr">PR NEWS</a></li>
+                    <li><a href="/review">User Review</a></li>
                 </ul>
               </li>
-              <li><a href="">ติดต่อเรา</a></li>
+              <li><a href="/contact">ติดต่อเรา</a></li>
             </ul>
           </div>
         </div>
