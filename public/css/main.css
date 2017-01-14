@@ -11,6 +11,16 @@ body {
 ul {
   margin-bottom: 0px;
 }
+.loading {
+  position: relative;
+  width: 40px !important;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
 @keyframes opacityAnimation {
   0% {
     opacity: 1;
@@ -168,13 +178,13 @@ ul {
   transform: translate(-50%, 0);
 }
 .nav-bar-mobile {
-  height: 40px;
+  height: 45px;
   display: none;
   background-color: #07b0de;
   text-align: left;
 }
 .nav-bar-mobile img {
-  height: 40px;
+  height: 45px;
   left: 10px;
   position: absolute;
   cursor: pointer;
@@ -183,13 +193,13 @@ ul {
   z-index: 1;
   background-color: #2a3642;
   position: relative;
-  top: 40px;
+  top: 45px;
   width: 70%;
   max-width: 300px;
 }
 .mobile-list li {
-  min-height: 40px;
-  line-height: 40px;
+  min-height: 45px;
+  line-height: 45px;
 }
 .mobile-list li a {
   color: white;

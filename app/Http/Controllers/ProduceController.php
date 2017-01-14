@@ -53,7 +53,8 @@ class ProduceController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::where('id', $id)->first();
+        return view('produce.show',compact('post'));
     }
 
     /**

@@ -10,7 +10,7 @@ $footer_border_color: #cdeff3;
 
 //dimention
 $body_max_width: 1280px;
-$mobile_menu_height: 40px;
+$mobile_menu_height: 45px;
 
 html{
   background-color: $html_bg_color;
@@ -26,6 +26,17 @@ body {
 
 ul{
   margin-bottom: 0px;
+}
+
+.loading{
+  position: relative;
+  width: 40px !important;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 
 @keyframes opacityAnimation {
