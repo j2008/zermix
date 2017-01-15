@@ -20,7 +20,7 @@
               <li><a href="/">หน้าแรก</a></li>
               <li><a href="/about">เกี่ยวกับ Zermix</a></li>
               <li><a href="/produce">ผลิตภัณฑ์</a></li>
-              <li><a href="/location">สถานที่จำหน่าย</a></li>
+              <li><a href="/store">สถานที่จำหน่าย</a></li>
               <li><a href="">สาระน่ารู้</a>
                 <ul class="sub-menu">
                     <li><a href="/feature">Feature Content</a></li>
@@ -45,7 +45,7 @@
               <li><a href="/">หน้าแรก</a></li>
               <li><a href="/about">เกี่ยวกับ Zermix</a></li>
               <li><a href="/produce">ผลิตภัณฑ์</a></li>
-              <li><a href="/location">สถานที่จำหน่าย</a></li>
+              <li><a href="/store">สถานที่จำหน่าย</a></li>
               <li><a href="">สาระน่ารู้</a>
                 <ul class="sub-menu">
                     <li><a href="/feature">Feature Content</a></li>

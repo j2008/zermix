@@ -8,6 +8,7 @@ $(document).ready(function(){
     $(this).addClass("active");
     $('.produce').css('display','none');
     $( ".produce-detail" ).html('');
+    $( ".produce-detail" ).css('display','none');
     $('.'+class_name+"-produce").fadeIn(500);
   })
 })
