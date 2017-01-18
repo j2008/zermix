@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Post;
+use TCG\Voyager\Models\Category;
 
 class StoreController extends Controller
 {
@@ -12,6 +14,7 @@ class StoreController extends Controller
   }
   public function show($location)
   {
-    return view('store.show');
+    $post = Post::where('slug',$location)->get()[0];
+    return view('store.show',compact('post'));
   }
 }

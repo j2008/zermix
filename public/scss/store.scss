@@ -1,5 +1,40 @@
 .map{
   text-align: center;
-  padding: 30px 0px;
+  padding: 1px 0px;
   background-color: #f5f3f3;
+  width: 100%;
+  img{
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+
+.store-detail{
+  display: none;
+  padding: 2%;
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+  width: 50%;
+  min-height: 700px;
+  background-color: white;
+  .detail-text{
+    width:100%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.slide-out {
+    animation: slide-out 0.8s forwards;
+    -webkit-animation: slide-out 0.8s forwards;
+}
+
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-10%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-10%); }
 }
