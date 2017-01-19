@@ -34,8 +34,10 @@
   <div class="all-produce produce">
     @foreach ($posts as $post)
       <div class="post" onclick="loadDetail({{$post->id}});">
-        <img src="/storage/{{$post->image}}" />
-        <p>{{$post->title}}</p>
+        <div>
+          <img src="/storage/{{$post->image}}" />
+          <p>{{$post->title}}</p>
+        </div>
       </div>
     @endforeach
   </div>
@@ -44,8 +46,10 @@
       @foreach ($posts as $post)
         @if($post->category_id == $category->id)
           <div class="post" onclick="loadDetail({{$post->id}});">
-            <img src="/storage/{{$post->image}}" />
-            <p>{{$post->title}}</p>
+            <div>
+              <img src="/storage/{{$post->image}}" />
+              <p>{{$post->title}}</p>
+            </div>
           </div>
         @endif
       @endforeach
