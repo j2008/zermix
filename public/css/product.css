@@ -1,17 +1,17 @@
-.produce {
+.product {
   text-align: center;
   display: none;
   padding: 20px 0px;
   background-color: #fbf4ed;
 }
-.produce .post {
+.product .post {
   display: inline-block;
   background-color: #fff;
   cursor: pointer;
   border: 1px solid #fbf2f3;
   vertical-align: top;
 }
-.produce .post div {
+.product .post div {
   position: relative;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -20,7 +20,7 @@
   -o-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-.produce .post:hover {
+.product .post:hover {
   box-shadow: 1px 1px 50px #b1c1be;
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -40,18 +40,18 @@
   webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.all-produce {
+.all-product {
   display: block;
 }
-.produce-list {
+.product-list {
   margin-top: 20px;
 }
-.produce-list ul {
+.product-list ul {
   border-bottom: 2px solid #9b9ca7;
   padding: 0px;
   text-align: center;
 }
-.produce-list ul li {
+.product-list ul li {
   display: inline-block;
   margin: 0% 0.1%;
   width: 23%;
@@ -64,25 +64,25 @@
   border-right: 1px solid #e5e1ea;
   border-radius: 10px 10px 0px 0px;
 }
-.produce-list ul .active {
+.product-list ul .active {
   border-top: 2px solid #9b9ca7;
   border-left: 2px solid #9b9ca7;
   border-right: 2px solid #9b9ca7;
 }
-.produce-detail {
+.product-detail {
   display: none;
   padding: 2%;
   border-bottom: 1px solid gainsboro;
 }
-.produce-detail a {
+.product-detail a {
   width: 36%;
   display: inline-block;
 }
-.produce-detail a img {
+.product-detail a img {
   width: 100%;
   vertical-align: top;
 }
-.produce-detail .detail-text {
+.product-detail .detail-text {
   width: 60%;
   display: inline-block;
   vertical-align: top;
@@ -122,17 +122,17 @@
   }
 }
 @media (max-width: 768px) {
-  .produce-detail a {
+  .product-detail a {
     width: 100%;
   }
-  .produce-detail a img {
+  .product-detail a img {
     width: 100%;
   }
-  .produce-detail .detail-text {
+  .product-detail .detail-text {
     width: 100%;
     display: block !important;
   }
-  .produce-list ul li {
+  .product-list ul li {
     font-size: 8px;
   }
 }

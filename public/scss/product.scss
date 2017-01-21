@@ -1,7 +1,7 @@
 $active_type_border_color: #9b9ca7;
 $normal_type_border_color: #e5e1ea;
 
-.produce{
+.product{
   text-align: center;
   display: none;
   padding: 20px 0px;
@@ -45,11 +45,11 @@ $normal_type_border_color: #e5e1ea;
   transition: 0.3s;
 }
 
-.all-produce{
+.all-product{
   display: block;
 }
 
-.produce-list{
+.product-list{
   margin-top: 20px;
   ul{
     border-bottom: 2px solid $active_type_border_color;
@@ -76,7 +76,7 @@ $normal_type_border_color: #e5e1ea;
   }
 }
 
-.produce-detail{
+.product-detail{
   display: none;
   padding: 2%;
   border-bottom: 1px solid gainsboro;
@@ -132,7 +132,7 @@ $normal_type_border_color: #e5e1ea;
 }
 
 @media (max-width: 768px) {
-  .produce-detail{
+  .product-detail{
     a{
       width: 100%;
       img{
@@ -144,7 +144,7 @@ $normal_type_border_color: #e5e1ea;
       display: block !important;
     }
   }
-  .produce-list{
+  .product-list{
     ul{
       li{
         font-size: 8px;

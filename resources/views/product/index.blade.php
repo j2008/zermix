@@ -1,10 +1,10 @@
 @extends('layout')
 
-@section('title', 'Produce')
+@section('title', 'product')
 
 @section('header')
-  <link rel="stylesheet" type="text/css" href="css/produce.css">
-  <script src="js/produce.js" type="text/javascript" ></script>
+  <link rel="stylesheet" type="text/css" href="css/product.css">
+  <script src="js/product.js" type="text/javascript" ></script>
 
   <!-- Add fancyBox -->
 	<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
@@ -20,8 +20,8 @@
 @endsection
 
 @section('content')
-  <!-- produce type list menu -->
-  <div class="produce-list">
+  <!-- product type list menu -->
+  <div class="product-list">
     <ul>
       <li class="all-button active"><p>ทั้งหมด</p></li>
       @foreach ($categories as $category)
@@ -30,8 +30,8 @@
     </ul>
   </div>
 
-  <!-- produce list -->
-  <div class="all-produce produce">
+  <!-- product list -->
+  <div class="all-product product">
     @foreach ($posts as $post)
       <div class="post" onclick="loadDetail({{$post->id}});">
         <div>
@@ -42,7 +42,7 @@
     @endforeach
   </div>
   @foreach ($categories as $category)
-    <div class="{{$category->name}}-produce produce">
+    <div class="{{$category->name}}-product product">
       @foreach ($posts as $post)
         @if($post->category_id == $category->id)
           <div class="post" onclick="loadDetail({{$post->id}});">
@@ -56,8 +56,8 @@
     </div>
   @endforeach
 
-  <!-- produce detail -->
-  <div class="produce-detail">
+  <!-- product detail -->
+  <div class="product-detail">
 
   </div>
 

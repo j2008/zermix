@@ -7,7 +7,7 @@ use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Category;
 use Illuminate\Support\Facades\DB;
 
-class ProduceController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,7 +25,7 @@ class ProduceController extends Controller
            ->get();
 
       $categories = Category::where('parent_id','3')->get();
-      return view('produce.index',compact('posts','categories'));
+      return view('product.index',compact('posts','categories'));
     }
 
     /**
@@ -58,7 +58,7 @@ class ProduceController extends Controller
     public function show($id)
     {
         $post = Post::where('id', $id)->first();
-        return view('produce.show',compact('post'));
+        return view('product.show',compact('post'));
     }
 
     /**

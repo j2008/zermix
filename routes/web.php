@@ -16,8 +16,8 @@ Route::get('/test', function () {
 });
 
 Route::get('/', ['uses' => 'IndexController@index', 'as' => '/']);
-Route::get('/produce', ['uses' => 'ProduceController@index', 'as' => '/produce']);
-Route::get('/produce/{id}', ['uses' => 'ProduceController@show', 'as' => '/produce/{id}']);
+Route::get('/product', ['uses' => 'ProductController@index', 'as' => '/']);
+Route::get('/product/{id}', ['uses' => 'ProductController@show', 'as' => '/product/{id}']);
 Route::get('/store', ['uses' => 'StoreController@index', 'as' => '/store']);
 Route::get('/store/{location}', ['uses' => 'StoreController@show', 'as' => '/store/{location}']);
 Route::get('/about', ['uses' => 'AboutController@index', 'as' => '/about']);
