@@ -18,11 +18,20 @@ class ProductController extends Controller
     {
       //$posts = Post::whereNotNull('category_id')->orderBy('id', 'desc')->take(10)->get();
 
+      //Use Query Builder
       $posts = DB::table('posts')
            ->join('categories', 'posts.category_id', '=', 'categories.id')
            ->select('posts.*', 'categories.parent_id')
            ->where('categories.parent_id',3)
            ->get();
+
+      /*
+      //Use Eloquent (Can use relation model but eat more resource)
+      $posts = Post::join('categories', 'posts.category_id', '=', 'categories.id')
+        ->select('posts.*', 'categories.parent_id')
+        ->where('categories.parent_id',3)
+        ->get();
+      */
 
       $categories = Category::where('parent_id','3')->get();
       return view('product.index',compact('posts','categories'));

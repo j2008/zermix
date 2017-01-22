@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  checkAnimate();
   $(".fancybox").fancybox();
   $('.product-list li').on('click',function(){
     $('.product-list li').removeClass("active");
@@ -21,6 +22,21 @@ function loadDetail(id) {
     $( ".product-detail" ).css( 'display','block' );
     $('html,body').animate({scrollTop:$( ".product-detail" ).offset().top-10}, 1000);
   });
+}
+
+$(window).scroll(function() {
+  checkAnimate();
+});
+
+function checkAnimate(){
+  $('.animate').each(function(){
+		var imagePos = $(this).offset().top;
+		var topOfWindow = $(window).scrollTop() + $(window).innerHeight() - 100;
+
+		if (imagePos < topOfWindow) {
+			$(this).addClass("fadeIn");
+		}
+	});
 }
 
 $('.fancybox').fancybox({

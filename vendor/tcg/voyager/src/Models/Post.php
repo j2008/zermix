@@ -38,4 +38,10 @@ class Post extends Model
     {
         return $query->where('status', '=', static::PUBLISHED);
     }
+
+    public function category()
+    {
+        //$this->hasMany('App\Comment', 'foreign_key', 'local_key');
+        return $this->hasOne('TCG\Voyager\Models\Category','id','category_id');
+    }
 }

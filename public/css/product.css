@@ -64,6 +64,11 @@
   border-right: 1px solid #e5e1ea;
   border-radius: 10px 10px 0px 0px;
 }
+.product-list ul li:hover {
+  border-top: 1px solid #9b9ca7;
+  border-left: 1px solid #9b9ca7;
+  border-right: 1px solid #9b9ca7;
+}
 .product-list ul .active {
   border-top: 2px solid #9b9ca7;
   border-left: 2px solid #9b9ca7;

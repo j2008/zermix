@@ -3,6 +3,7 @@
 @section('title', 'product')
 
 @section('header')
+  <link rel="stylesheet" type="text/css" href="css/animations.css">
   <link rel="stylesheet" type="text/css" href="css/product.css">
   <script src="js/product.js" type="text/javascript" ></script>
 
@@ -33,7 +34,7 @@
   <!-- product list -->
   <div class="all-product product">
     @foreach ($posts as $post)
-      <div class="post" onclick="loadDetail({{$post->id}});">
+      <div class="post animate" onclick="loadDetail({{$post->id}});">
         <div>
           <img src="/storage/{{$post->image}}" />
           <p>{{$post->title}}</p>
@@ -45,7 +46,7 @@
     <div class="{{$category->name}}-product product">
       @foreach ($posts as $post)
         @if($post->category_id == $category->id)
-          <div class="post" onclick="loadDetail({{$post->id}});">
+          <div class="post animate" onclick="loadDetail({{$post->id}});">
             <div>
               <img src="/storage/{{$post->image}}" />
               <p>{{$post->title}}</p>

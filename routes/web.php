@@ -22,6 +22,9 @@ Route::get('/store', ['uses' => 'StoreController@index', 'as' => '/store']);
 Route::get('/store/{location}', ['uses' => 'StoreController@show', 'as' => '/store/{location}']);
 Route::get('/about', ['uses' => 'AboutController@index', 'as' => '/about']);
 Route::get('/contact', ['uses' => 'ContactController@index', 'as' => '/contact']);
+Route::get('/feature', ['uses' => 'ContentController@feature', 'as' => '/feature']);
+Route::get('/pr', ['uses' => 'ContentController@pr', 'as' => '/pr']);
+Route::get('/review', ['uses' => 'ContentController@review', 'as' => '/review']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -68,6 +68,11 @@ $normal_type_border_color: #e5e1ea;
       border-right: 1px solid $normal_type_border_color;
       border-radius: 10px 10px 0px 0px;
     }
+    li:hover{
+      border-top: 1px solid $active_type_border_color;
+      border-left: 1px solid $active_type_border_color;
+      border-right: 1px solid $active_type_border_color;
+    }
     .active{
       border-top: 2px solid $active_type_border_color;
       border-left: 2px solid $active_type_border_color;
