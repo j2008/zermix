@@ -28,33 +28,18 @@
               <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
           </div>
           <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:400px;overflow:hidden;">
+            @foreach ($posts as $post)
               <div>
-                  <img data-u="image" src="img/slide2.jpg" />
-                  <div data-u="caption" data-t="0" style="border-radius:0px 0px 0px 20px;position:absolute;top:0px;left:-400px;width:400px;height:30px;z-index:0;background-color:rgba(60, 54, 50, 0.8);font-size:20px;color:#ffffff;line-height:30px;text-align:center;">
-                    <p>Title</p>
+                <img data-u="image" src="img/blue.jpg" />
+                <div data-u="caption" data-t="1" style="position:absolute;padding:20px;bottom:20px;left:-760px;width:760px;height:360px;border-radius: 30px;z-index:0;background-color:rgba(37, 33, 33, 0.62);color:white;font-size:16px;line-height:30px;text-align:center;">
+                  <img src="storage/{{$post->image}}" style="max-height:200px;" />
+                  <div class="right-detail">
+                    <h2>{{$post->title}}</h2>
+                    <p style="word-wrap: break-word;">{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
                   </div>
-                  <div data-u="caption" data-t="1" style="position:absolute;bottom:0px;left:-800px;width:800px;height:70px;z-index:0;background-color:rgba(60, 54, 50, 0.8);font-size:20px;color:#ffffff;line-height:30px;text-align:center;">
-                    <p>This is full customized content layer. This is full customized content layer. This is full customized content layer. This is full customized content layer.</p>
-                  </div>
+                </div>
               </div>
-              <div>
-                  <img data-u="image" src="img/blue.jpg" />
-                  <div data-u="caption" data-t="0" style="border-radius:0px 0px 0px 20px;position:absolute;top:0px;left:-400px;width:400px;height:30px;z-index:0;background-color:rgba(60, 54, 50, 0.8);font-size:20px;color:#ffffff;line-height:30px;text-align:center;">
-                    <p>Title</p>
-                  </div>
-                  <div data-u="caption" data-t="1" style="position:absolute;bottom:0px;left:-800px;width:800px;height:70px;z-index:0;background-color:rgba(60, 54, 50, 0.8);font-size:20px;color:#ffffff;line-height:30px;text-align:center;">
-                    <p>This is full customized content layer. This is full customized content layer. This is full customized content layer. This is full customized content layer.</p>
-                  </div>
-              </div>
-              <div>
-                  <img data-u="image" src="img/red.jpg" />
-                  <div data-u="caption" data-t="0" style="border-radius:0px 0px 0px 20px;position:absolute;top:0px;left:-400px;width:400px;height:30px;z-index:0;background-color:rgba(60, 54, 50, 0.8);font-size:20px;color:#ffffff;line-height:30px;text-align:center;">
-                    <p>Title</p>
-                  </div>
-                  <div data-u="caption" data-t="1" style="position:absolute;bottom:0px;left:-800px;width:800px;height:70px;z-index:0;background-color:rgba(60, 54, 50, 0.8);font-size:20px;color:#ffffff;line-height:30px;text-align:center;">
-                    <p>This is full customized content layer. This is full customized content layer. This is full customized content layer. This is full customized content layer.</p>
-                  </div>
-              </div>
+            @endforeach
           </div>
           <!-- Bullet Navigator -->
           <div data-u="navigator" class="jssorb01" style="bottom:16px;right:168px;">
@@ -81,10 +66,41 @@
       <!-- left side content -->
       <div class="contents">
         <div class="type-choice">
-
+          <ul>
+            <li class="all-type">All</li>
+            @foreach ($categories as $category)
+              /
+              <li class="{{$category->name}}-type">{{$category->name}}</li>
+            @endforeach
+          </ul>
         </div>
         <div class="contents-list">
-
+          <div class="all-content lists">
+            @foreach ($posts as $post)
+              <div class="list">
+                <a href="/post/{{$post->id}}" target="_blank" ><img src="storage/{{$post->image}}" /></a>
+                <div class="detail">
+                  <h2>{{$post->title}}</h2>
+                  <p>{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
+                </div>
+              </div>
+            @endforeach
+          </div>
+          @foreach ($categories as $category)
+            <div class="{{$category->name}}-content lists">
+              @foreach ($posts as $post)
+                @if ($post->category_id == $category->id)
+                  <div class="list">
+                    <a href="/post/{{$post->id}}" target="_blank" ><img src="storage/{{$post->image}}" /></a>
+                    <div class="detail">
+                      <h2>{{$post->title}}</h2>
+                      <p>{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
+                    </div>
+                  </div>
+                @endif
+              @endforeach
+            </div>
+          @endforeach
         </div>
       </div>
 

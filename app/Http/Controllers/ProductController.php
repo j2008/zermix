@@ -25,14 +25,6 @@ class ProductController extends Controller
            ->where('categories.parent_id',3)
            ->get();
 
-      /*
-      //Use Eloquent (Can use relation model but eat more resource)
-      $posts = Post::join('categories', 'posts.category_id', '=', 'categories.id')
-        ->select('posts.*', 'categories.parent_id')
-        ->where('categories.parent_id',3)
-        ->get();
-      */
-
       $categories = Category::where('parent_id','3')->get();
       return view('product.index',compact('posts','categories'));
     }
