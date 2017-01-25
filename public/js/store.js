@@ -15,6 +15,6 @@ function openMap(id) {
   $.get( "/store/"+id, function( data ) {
     $( ".store-detail" ).html( data );
     $( ".store-detail" ).css( 'display','inline-block' );
-    $('html,body').animate({scrollTop:$( ".store-detail" ).offset().top-50}, 500);
+    $('html,body').animate({scrollTop:$( ".store-detail" ).offset().top-10}, 500);
   });
 }

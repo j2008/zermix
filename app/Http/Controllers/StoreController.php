@@ -14,7 +14,10 @@ class StoreController extends Controller
   }
   public function show($location)
   {
-    $post = Post::where('slug',$location)->get()[0];
-    return view('store.show',compact('post'));
+    if($location == "bangkok") {
+      $posts = Post::where('category_id',12)->get();
+    }
+    else $posts = Post::where('slug',$location)->get();
+    return view('store.show',compact('posts'));
   }
 }

@@ -137,6 +137,9 @@
     width: 100%;
     display: block !important;
   }
+  .product-list {
+    margin-top: 0px;
+  }
   .product-list ul li {
     font-size: 8px;
   }

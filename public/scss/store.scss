@@ -12,9 +12,10 @@
 .store-detail{
   display: none;
   padding: 2%;
+  margin-bottom: 20px;
   border: 1px solid gainsboro;
   border-radius: 20px;
-  width: 50%;
+  width: 55%;
   min-height: 700px;
   background-color: white;
   .detail-text{
@@ -37,4 +38,34 @@
 @-webkit-keyframes slide-out {
     0% { -webkit-transform: translateX(0%); }
     100% { -webkit-transform: translateX(-10%); }
+}
+
+@media (max-width:1024px)  {
+  .store-detail{
+    width: 95%;
+  }
+}
+
+@media (max-width:768px)  {
+  .map{
+    overflow: hidden;
+    img{
+      -webkit-transform: scale(.8);
+      -webkit-transform-origin: 0 0;
+      transform: scale(.8);
+      transform-origin: 0 0;
+      animation: '';
+      -webkit-animation: '';
+    }
+  }
+  .detail-text{
+    table{
+      width: 265pt !important;
+      font-size: 7px;
+    }
+  }
+  .store-detail{
+    position: relative;
+    top: -100px;
+  }
 }
