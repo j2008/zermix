@@ -22,9 +22,11 @@ Route::get('/store', ['uses' => 'StoreController@index', 'as' => '/store']);
 Route::get('/store/{location}', ['uses' => 'StoreController@show', 'as' => '/store/{location}']);
 Route::get('/about', ['uses' => 'AboutController@index', 'as' => '/about']);
 Route::get('/contact', ['uses' => 'ContactController@index', 'as' => '/contact']);
+Route::post('/ship', ['uses' => 'ContactController@ship', 'as' => '/ship']);
 Route::get('/feature', ['uses' => 'ContentController@feature', 'as' => '/feature']);
 Route::get('/pr', ['uses' => 'ContentController@pr', 'as' => '/pr']);
 Route::get('/review', ['uses' => 'ContentController@review', 'as' => '/review']);
+Route::get('/post/{id}', ['uses' => 'ContentController@show', 'as' => '/post/{id}']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

@@ -39,4 +39,10 @@ class ContentController extends Controller
       ->get();
     return view('content.review',compact('categories','posts'));
   }
+  public function show($id)
+  {
+    //Use Eloquent (Can use relation model but eat more resource)
+    $post = Post::where('id',$id)->get()[0];
+    return view('content.show',compact('post'));
+  }
 }

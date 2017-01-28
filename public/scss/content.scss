@@ -14,7 +14,7 @@ $height_of_news_menu: 30px;
 }
 
 .banner{
-  min-width: 570px;
+  width: 570px;
   position: relative;
   min-height: 340px;
   border: 1px solid grey;
@@ -157,6 +157,66 @@ $height_of_news_menu: 30px;
     }
   }
 }
+
+.post-body{
+  text-align: center;
+  .content-text{
+    border-top: 1px solid #e3e3ec;
+    text-align: left;
+    padding: 10px;
+    margin: auto;
+  }
+  .recommend{
+
+  }
+}
+
+@media (min-width : 769px)  {
+  .content-text{
+    max-width: 80%;
+  }
+}
+@media (max-width : 1024px)  {
+  .sitemenu,.sitemenu-title{
+    display: none !important;
+  }
+  .below-bar,.bar{
+    top:15px !important;
+  }
+  .contents{
+    width: 100% !important;
+  }
+  .list img{
+    margin: 0px !important;
+  }
+  .detail{
+    font-size: 10px !important;
+  }
+  h2{
+    font-size: 14px !important;
+  }
+}
+@media (max-width : 768px)  {
+  .content-text{
+    max-width: 90%;
+  }
+  .banner{
+    width: 100%;
+  }
+  .content-menu{
+    margin-top: 0px;
+  }
+}
+@media (max-width : 480px)  {
+  .content-text{
+    max-width: 95%;
+  }
+  h1{
+    font-size: 24px;
+  }
+}
+
+
 
 
 
