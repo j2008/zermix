@@ -108,10 +108,19 @@
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
             <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a>
             <div data-p="225.00" style="display:none;">
-                <img data-u="image" src="img/blue.jpg" />
+                <img data-u="image" src="img/banner1.png" />
             </div>
             <div data-p="225.00" style="display:none;">
-                <img data-u="image" src="img/red.jpg" />
+                <img data-u="image" src="img/banner2.png" />
+            </div>
+            <div data-p="225.00" style="display:none;">
+                <img data-u="image" src="img/banner3.png" />
+            </div>
+            <div data-p="225.00" style="display:none;">
+                <img data-u="image" src="img/banner4.png" />
+            </div>
+            <div data-p="225.00" style="display:none;">
+                <img data-u="image" src="img/banner5.png" />
             </div>
         </div>
         <!-- Bullet Navigator -->

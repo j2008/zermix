@@ -89,7 +89,7 @@
                             </thead>
                             <tbody>
                                 @foreach($dataTypeContent as $data)
-                                  @if($data->category['parent_id'] == $category->id)
+                                  @if($data->category['parent_id'] == $category->id || $data->category_id == $category->id)
                                     <tr>
                                         @foreach($dataType->browseRows as $row)
                                         <td>
