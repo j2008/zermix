@@ -36,9 +36,11 @@ class VoyagerBreadController extends Controller
 
         // Next Get or Paginate the actual content from the MODEL that corresponds to the slug DataType
         if (strlen($dataType->model_name) != 0) {
+            //Shortcut to call class or model without to declare "use TCG\Voyager\Models\Post;" above class , example: app('TCG\Voyager\Models\Post') will get Post model
             $model = app($dataType->model_name);
 
             if ($model->timestamps) {
+                //Look like Post::get()
                 $dataTypeContent = call_user_func([$model->latest(), $getter]);
             } else {
                 $dataTypeContent = call_user_func([$model->orderBy('id', 'DESC'), $getter]);
@@ -51,7 +53,17 @@ class VoyagerBreadController extends Controller
         $view = 'voyager::bread.browse';
 
         if (view()->exists("voyager::$slug.browse")) {
+            //example "voyager::posts.browse"
             $view = "voyager::$slug.browse";
+        }
+
+        if($slug == "posts") {
+          $category_model = app("TCG\Voyager\Models\Category");
+          $top_categories = call_user_func([$category_model->latest()->where(function ($query) {
+              $query->whereNull('parent_id')->where('id','>=',3)->where('id','!=',15)->orwhere('id','>=',17)->where('id','<=',21);
+          }), 'get']);
+
+          return view($view, compact('dataType', 'dataTypeContent', 'top_categories'));
         }
 
         return view($view, compact('dataType', 'dataTypeContent'));
