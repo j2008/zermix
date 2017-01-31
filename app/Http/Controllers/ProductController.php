@@ -22,7 +22,7 @@ class ProductController extends Controller
       $posts = DB::table('posts')
            ->join('categories', 'posts.category_id', '=', 'categories.id')
            ->select('posts.*', 'categories.parent_id')
-           ->where('categories.parent_id',3)->orderBy('posts.order','desc')
+           ->where('categories.parent_id',3)->orderBy('posts.order','ASC')
            ->get();
 
       $categories = Category::where('parent_id','3')->get();
