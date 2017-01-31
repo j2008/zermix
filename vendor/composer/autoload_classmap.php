@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddNameThToCategoriesTable' => $baseDir . '/database/migrations/2017_01_14_115254_add_name_th_to_categories_table.php',
+    'AddOrderToPostsTable' => $baseDir . '/database/migrations/2017_01_31_145628_add_order_to_posts_table.php',
     'AddUserAvatar' => $baseDir . '/database/migrations/2016_01_01_000000_add_user_avatar.php',
     'AddUserRole' => $baseDir . '/database/migrations/2016_11_30_131710_add_user_role.php',
     'CategoriesTableSeeder' => $baseDir . '/database/seeds/CategoriesTableSeeder.php',

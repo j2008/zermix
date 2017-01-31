@@ -334,6 +334,7 @@ class ComposerStaticInitf588d0454e5dad2dfa102466308cb77b
 
     public static $classMap = array (
         'AddNameThToCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_14_115254_add_name_th_to_categories_table.php',
+        'AddOrderToPostsTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_31_145628_add_order_to_posts_table.php',
         'AddUserAvatar' => __DIR__ . '/../..' . '/database/migrations/2016_01_01_000000_add_user_avatar.php',
         'AddUserRole' => __DIR__ . '/../..' . '/database/migrations/2016_11_30_131710_add_user_role.php',
         'CategoriesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoriesTableSeeder.php',

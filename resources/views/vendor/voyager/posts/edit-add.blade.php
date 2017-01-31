@@ -124,6 +124,10 @@
                                 <input type="text" class="form-control" name="slug" placeholder="slug" value="@if(isset($dataTypeContent->slug)){{ $dataTypeContent->slug }}@endif">
                             </div>
                             <div class="form-group">
+                                <label for="name">Order</label>
+                                <input type="text" class="form-control" name="order" placeholder="order number" value="@if(isset($dataTypeContent->oder)){{ $dataTypeContent->order }}@endif">
+                            </div>
+                            <div class="form-group">
                                 <label for="name">Post Status</label>
                                 <select class="form-control" name="status">
                                     <option value="PUBLISHED" @if(isset($dataTypeContent->status) && $dataTypeContent->status == 'PUBLISHED'){{ 'selected="selected"' }}@endif>published</option>
