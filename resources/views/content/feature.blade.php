@@ -30,11 +30,11 @@
           <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:400px;overflow:hidden;">
             @foreach ($posts as $post)
               <div>
-                <img data-u="image" src="img/blue.jpg" />
+                <img data-u="image" src="img/bg-slide.jpg" />
                 <div data-u="caption" data-t="1" style="position:absolute;padding:20px;bottom:20px;left:-760px;width:760px;height:360px;border-radius: 30px;z-index:0;background-color:rgba(37, 33, 33, 0.62);color:white;font-size:16px;line-height:30px;text-align:center;">
                   <img src="storage/{{$post->image}}" style="max-height:200px;" />
                   <div class="right-detail">
-                    <h2>{{$post->title}}</h2>
+                    <h2><b>{{$post->title}}</b></h2>
                     <p style="word-wrap: break-word;">{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
                   </div>
                 </div>
@@ -80,7 +80,7 @@
               <div class="list">
                 <a href="/post/{{$post->id}}" target="_blank" ><img src="storage/{{$post->image}}" /></a>
                 <div class="detail">
-                  <h2>{{$post->title}}</h2>
+                  <h2><b>{{$post->title}}</b></h2>
                   <p>{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
                 </div>
               </div>
@@ -93,7 +93,7 @@
                   <div class="list">
                     <a href="/post/{{$post->id}}" target="_blank" ><img src="storage/{{$post->image}}" /></a>
                     <div class="detail">
-                      <h2>{{$post->title}}</h2>
+                      <h2><b>{{$post->title}}</b></h2>
                       <p>{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
                     </div>
                   </div>

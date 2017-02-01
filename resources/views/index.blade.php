@@ -2,10 +2,35 @@
 
 @section('title', 'Home')
 
-@section('content')
+@section('header')
   <script src="js/jssor.slider-22.0.15.mini.js" type="text/javascript" data-library="jssor.slider.mini" data-version="22.0.15"></script>
+  <link rel="stylesheet" href="/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+  <script src="/js/owl.carousel.min.js"></script>
+@endsection
+
+@section('content')
   <script type="text/javascript">
       jQuery(document).ready(function ($) {
+          $('.owl-carousel').owlCarousel({
+              loop:true,
+              margin:10,
+              nav:true,
+              autoplay:true,
+              autoplayTimeout:3000,
+              autoplayHoverPause:true,
+              responsive:{
+                  0:{
+                      items:3
+                  },
+                  600:{
+                      items:3
+                  },
+                  1000:{
+                      items:5
+                  }
+              }
+          })
 
           var jssor_1_options = {
             $AutoPlay: true,
@@ -44,6 +69,10 @@
       });
     </script>
     <style>
+      .item img{
+        max-width: 200px;
+        max-height: 200px;
+      }
       /* jssor slider bullet navigator skin 05 css */
       /*
       .jssorb05 div           (normal)
@@ -132,4 +161,15 @@
         <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
     </div>
+    <div style="text-align:center;"><h2>Our Product</h2></div>
+    <div style="border:1px solid #e3e3ec; margin:10px auto; width: 70%;" ></div>
+    <div class="owl-carousel owl-theme">
+      @foreach ($posts as $post)
+        <div class="item">
+          <a href="/post/{{$post->id}}"><img src="/storage/{{$post->image}}" /></a>
+          <h4>{{$post->title}}</h4>
+        </div>
+      @endforeach
+    </div>
+    <div style="border-top:1px solid #e3e3ec; margin:10px auto; width: 100%;" ></div>
 @endsection

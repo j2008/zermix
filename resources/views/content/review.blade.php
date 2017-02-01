@@ -13,9 +13,9 @@
     <!-- sub menu -->
     <div class="content-menu">
       <ul>
-        <li class="feature-button active"><a href="/feature">บทความพิเศษ</a></li>
+        <li class="feature-button"><a href="/feature">บทความพิเศษ</a></li>
         <li class="pr-button"><a href="/pr">บทความ PR</a></li>
-        <li class="review-button"><a href="/review">รีวิว</a></li>
+        <li class="review-button active"><a href="/review">รีวิว</a></li>
       </ul>
     </div>
 
@@ -30,7 +30,7 @@
             <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:400px;overflow:hidden;">
               @foreach ($posts as $post)
                 <div>
-                  <img data-u="image" src="img/blue.jpg" />
+                  <img data-u="image" src="img/bg-slide.jpg" />
                   <div data-u="caption" data-t="1" style="position:absolute;padding:20px;bottom:20px;left:-760px;width:760px;height:360px;border-radius: 30px;z-index:0;background-color:rgba(37, 33, 33, 0.62);color:white;font-size:16px;line-height:30px;text-align:center;">
                     <img src="storage/{{$post->image}}" style="max-height:200px;" />
                     <div class="right-detail">

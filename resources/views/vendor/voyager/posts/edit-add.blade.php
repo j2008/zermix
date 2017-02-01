@@ -125,7 +125,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Order</label>
-                                <input type="text" class="form-control" name="order" placeholder="order number" value="@if(isset($dataTypeContent->oder)){{ $dataTypeContent->order }}@endif">
+                                <input type="text" class="form-control" name="order" placeholder="order number" value="@if(isset($dataTypeContent->order)){{ $dataTypeContent->order }}@endif">
                             </div>
                             <div class="form-group">
                                 <label for="name">Post Status</label>

@@ -3,6 +3,16 @@ $normal_type_border_color: #e5e1ea;
 $main_border_color: #76cdd8;
 $height_of_news_menu: 30px;
 
+h2{
+  font-size: 21px;
+}
+
+.item{
+  img{
+    max-width: 200px;
+  }
+}
+
 .content-page{
   text-align: center;
 }
@@ -92,7 +102,7 @@ $height_of_news_menu: 30px;
           .detail{
             max-width: 80%;
             display: inline-block;
-            vertical-align: middle;;
+            vertical-align: middle;
             p{
               word-wrap: break-word;
             }
@@ -160,6 +170,7 @@ $height_of_news_menu: 30px;
 
 .post-body{
   text-align: center;
+  border-bottom: 1px solid #eae6e6;
   .content-text{
     border-top: 1px solid #e3e3ec;
     text-align: left;
@@ -174,6 +185,10 @@ $height_of_news_menu: 30px;
 @media (min-width : 769px)  {
   .content-text{
     max-width: 80%;
+    img{
+      max-width: 500px;
+      margin: 15px;
+    }
   }
 }
 @media (max-width : 1024px)  {
@@ -199,6 +214,10 @@ $height_of_news_menu: 30px;
 @media (max-width : 768px)  {
   .content-text{
     max-width: 90%;
+    img{
+      max-width: 80%;
+      margin: 5px;
+    }
   }
   .banner{
     width: 100%;

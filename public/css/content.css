@@ -1,3 +1,9 @@
+h2 {
+  font-size: 21px;
+}
+.item img {
+  max-width: 200px;
+}
 .content-page {
   text-align: center;
 }
@@ -142,6 +148,7 @@
 }
 .post-body {
   text-align: center;
+  border-bottom: 1px solid #eae6e6;
 }
 .post-body .content-text {
   border-top: 1px solid #e3e3ec;
@@ -152,6 +159,10 @@
 @media (min-width: 769px) {
   .content-text {
     max-width: 80%;
+  }
+  .content-text img {
+    max-width: 500px;
+    margin: 15px;
   }
 }
 @media (max-width: 1024px) {
@@ -177,6 +188,10 @@
 @media (max-width: 768px) {
   .content-text {
     max-width: 90%;
+  }
+  .content-text img {
+    max-width: 80%;
+    margin: 5px;
   }
   .banner {
     width: 100%;
