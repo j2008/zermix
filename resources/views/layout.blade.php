@@ -22,12 +22,14 @@
               <li><a href="/about">เกี่ยวกับ Zermix</a></li>
               <li><a href="/product">ผลิตภัณฑ์</a></li>
               <li><a href="/store">สถานที่จำหน่าย</a></li>
-              <li><a href="">สาระน่ารู้</a>
+              <li><a href="/feature">สาระน่ารู้</a>
+              <!--
                 <ul class="sub-menu">
                     <li><a href="/feature">Feature Content</a></li>
                     <li><a href="/pr">PR NEWS</a></li>
                     <li><a href="/review">User Review</a></li>
                 </ul>
+              -->
               </li>
               <li><a href="/contact">ติดต่อเรา</a></li>
             </ul>
@@ -48,11 +50,13 @@
               <li><a href="/product">ผลิตภัณฑ์</a></li>
               <li><a href="/store">สถานที่จำหน่าย</a></li>
               <li><a href="/feature">สาระน่ารู้</a>
+              <!--
                 <ul class="sub-menu">
                     <li><a href="/feature">Feature Content</a></li>
                     <li><a href="/pr">PR NEWS</a></li>
                     <li><a href="/review">User Review</a></li>
                 </ul>
+              -->
               </li>
               <li><a href="/contact">ติดต่อเรา</a></li>
             </ul>

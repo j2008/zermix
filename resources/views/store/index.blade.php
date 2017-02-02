@@ -10,6 +10,7 @@
 @section('content')
   <div class="map">
     <h2>เลือกภูมิภาคโดยคลิกที่แผนที่</h2>
+    <div style="border-bottom:1px solid #f1c5c1;margin:20px auto;width:70%;"></div>
     <img src="img/map.png" usemap="#map">
     <map name="map">
       <area shape="poly" coords="2,100,40,29,145,2,209,43,198,143,143,172,126,136,109,164,59,165,2,100" onClick="openMap('north')" />

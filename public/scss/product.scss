@@ -4,14 +4,13 @@ $normal_type_border_color: #e5e1ea;
 .product{
   text-align: center;
   display: none;
-  padding: 20px 0px;
-  background-color: #fbf4ed;
+  padding: 0px 0px;
+  border-bottom: 1px solid #e3e3ec;
   .post{
     display: inline-block;
-    background-color: #ffffff;
     cursor: pointer;
-    border: 1px solid #fbf2f3;
     vertical-align: top;
+    font-size: 22px;
     div{
       position: relative;
       top:50%;
@@ -23,7 +22,6 @@ $normal_type_border_color: #e5e1ea;
     }
   }
   .post:hover{
-    box-shadow: 1px 1px 50px #b1c1be;
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
@@ -35,7 +33,6 @@ $normal_type_border_color: #e5e1ea;
 }
 
 .post img:hover{
-  width: 500px;
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
@@ -104,10 +101,9 @@ $normal_type_border_color: #e5e1ea;
   .post{
     margin: 5px 50px;
     width: 400px;
-    height: 400px;
+    height: 380px;
     border-radius: 200px;
     img{
-      max-width: 300px;
       max-height: 300px;
     }
   }
@@ -116,10 +112,9 @@ $normal_type_border_color: #e5e1ea;
   .post{
     margin: 5px 5px;
     width: 400px;
-    height: 400px;
+    height: 380px;
     border-radius: 200px;
     img{
-      max-width: 300px;
       max-height: 300px;
     }
   }
@@ -130,7 +125,6 @@ $normal_type_border_color: #e5e1ea;
     width: 300px;
     height: 300px;
     img{
-      max-width: 200px;
       max-height: 200px;
     }
   }
@@ -164,11 +158,10 @@ $normal_type_border_color: #e5e1ea;
     width: 200px;
     height: 200px;
     img{
-      max-width: 150px;
       max-height: 150px;
     }
     div{
-      font-size: 7px;
+      font-size: 14px;
     }
   }
 }

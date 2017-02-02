@@ -32,9 +32,9 @@
               <div>
                 <img data-u="image" src="img/bg-slide.jpg" />
                 <div data-u="caption" data-t="1" style="position:absolute;padding:20px;bottom:20px;left:-760px;width:760px;height:360px;border-radius: 30px;z-index:0;background-color:rgba(37, 33, 33, 0.62);color:white;font-size:16px;line-height:30px;text-align:center;">
-                  <img src="storage/{{$post->image}}" style="max-height:200px;" />
+                  <a href="/post/{{$post->id}}" target="_blank"><img src="storage/{{$post->image}}" style="max-height:200px;" /></a>
                   <div class="right-detail">
-                    <h2><b>{{$post->title}}</b></h2>
+                    <a href="/post/{{$post->id}}" target="_blank" style="color:white;"><h2><b><u>{{$post->title}}</u></b></h2></a>
                     <p style="word-wrap: break-word;">{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
                   </div>
                 </div>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="banner">
-      <p>BANNER</p>
+      <img src="/img/content_banner.jpg" >
     </div>
 
     <div class="bar">
@@ -80,7 +80,7 @@
               <div class="list">
                 <a href="/post/{{$post->id}}" target="_blank" ><img src="storage/{{$post->image}}" /></a>
                 <div class="detail">
-                  <h2><b>{{$post->title}}</b></h2>
+                  <a href="/post/{{$post->id}}" target="_blank" ><h2><b>{{$post->title}}</b></h2></a>
                   <p>{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
                 </div>
               </div>
@@ -93,7 +93,7 @@
                   <div class="list">
                     <a href="/post/{{$post->id}}" target="_blank" ><img src="storage/{{$post->image}}" /></a>
                     <div class="detail">
-                      <h2><b>{{$post->title}}</b></h2>
+                      <a href="/post/{{$post->id}}" target="_blank" ><h2><b>{{$post->title}}</b></h2></a>
                       <p>{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
                     </div>
                   </div>

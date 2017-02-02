@@ -21,7 +21,7 @@
               autoplayHoverPause:true,
               responsive:{
                   0:{
-                      items:3
+                      items:2
                   },
                   600:{
                       items:3
@@ -167,7 +167,7 @@
       @foreach ($posts as $post)
         <div class="item">
           <a href="/post/{{$post->id}}"><img src="/storage/{{$post->image}}" /></a>
-          <h4>{{$post->title}}</h4>
+          <h4 style="text-align:center;">{{$post->title}}</h4>
         </div>
       @endforeach
     </div>

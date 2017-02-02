@@ -192,7 +192,7 @@ ul{
 }
 
 .mobile-list{
-  z-index: 1;
+  z-index: 9999;
   background-color: #2a3642;
   position: relative;
   top: $mobile_menu_height;
