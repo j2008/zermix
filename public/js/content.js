@@ -14,13 +14,13 @@ jssor_1_slider_init = function() {
 
     var jssor_1_SlideoTransitions = [
       [{b:0,d:600,x:800,e:{x:27}}],
-      [{b:200,d:600,x:780,e:{x:27}}],
+      [{b:200,d:600,x:800,e:{x:27}}],
       [{b:0,d:600,x:800,e:{x:27}}]
     ];
 
     var jssor_1_options = {
       $AutoPlay: true,
-      $Idle: 4000,
+      $Idle: 40000000,
       $CaptionSliderOptions: {
         $Class: $JssorCaptionSlideo$,
         $Transitions: jssor_1_SlideoTransitions,

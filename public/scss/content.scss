@@ -278,6 +278,22 @@ h2{
 .jssorb01 .av:hover     (active mouseover)
 .jssorb01 .dn           (mousedown)
 */
+.caption{
+  position:absolute;
+  bottom: 0px;
+  left: -800px;
+  width: 800px;
+  height:60px;
+  z-index:0;
+  background-color:rgba(37, 33, 33, 0.62);
+  color:white;
+  font-size:16px;
+  line-height:30px;
+  text-align:center;
+  h2{
+    margin-top: 10px !important;
+  }
+}
 .jssorb01 {
     position: absolute;
 }

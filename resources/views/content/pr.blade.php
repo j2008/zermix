@@ -30,12 +30,10 @@
             <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:800px;height:400px;overflow:hidden;">
               @foreach ($posts as $post)
                 <div>
-                  <img data-u="image" src="img/bg-slide.jpg" />
-                  <div data-u="caption" data-t="1" style="position:absolute;padding:20px;bottom:20px;left:-760px;width:760px;height:360px;border-radius: 30px;z-index:0;background-color:rgba(37, 33, 33, 0.62);color:white;font-size:16px;line-height:30px;text-align:center;">
-                    <a href="/post/{{$post->id}}" target="_blank"><img src="storage/{{$post->image}}" style="max-height:200px;" /><a>
+                  <a href="/post/{{$post->id}}" target="_blank"><img data-u="image" src="/storage/{{$post->image}}" /></a>
+                  <div data-u="caption" class="caption" data-t="1">
                     <div class="right-detail">
-                      <a href="/post/{{$post->id}}" target="_blank" style="color:white;"><h2><b><u>{{$post->title}}</u></b></h2></a>
-                      <p style="word-wrap: break-word;">{{$post->excerpt}} <a href="/post/{{$post->id}}" target="_blank" >คลิกเพื่ออ่านต่อ...</a></p>
+                      <a href="/post/{{$post->id}}" target="_blank" style="color:white;"><h2><b>{{$post->title}}</b></h2></a>
                     </div>
                   </div>
                 </div>
