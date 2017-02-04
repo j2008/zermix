@@ -20,7 +20,7 @@
           ga('send', 'pageview', location.pathname);
         </script>
         @yield('header')
-        <meta property="og:image" content="/img/content_banner.jpg" />
+        <meta property="og:image" content="https://www.zermix.com/img/content_banner.jpg" />
     </head>
     <body>
         <!-- header -->
