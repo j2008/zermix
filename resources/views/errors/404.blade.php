@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Not found page')
+@section('title', 'ผิดพลาด Not found page')
 
 @section('content')
   <div style="text-align:center;">

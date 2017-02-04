@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Zermix - @yield('title')</title>
+        <title>@yield('title') | Zermix</title>
         <meta charset="utf-8">
       	<meta http-equiv="X-UA-Compatible" content="IE=edge">
       	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -42,6 +42,7 @@
                 <img class="logo-img" src="{{ Voyager::image($admin_logo_img) }}" alt="Logo Icon">
             @endif
           </div>
+          <a href="https://web.facebook.com/zermix.zermix" target="_blank"><img class="social" src="/img/facebook icon.png" /></a>
           <img class="top-bar" src="{{ asset('/img/topbar.png') }}" alt="top bar" >
           <div class="nav-bar">
             <ul>
@@ -74,7 +75,7 @@
             <div><b><p>© Dermcorpharmaceutical.Zermix 2016</p></b></div>
           </div>
           <div class="right-footer">
-            <img src="/img/dermcor.png" />
+            <a href="http://www.dermcorpharma.com" target="_blank"><img src="/img/dermcor.png" /></a>
           </div>
         </div>
     </body>

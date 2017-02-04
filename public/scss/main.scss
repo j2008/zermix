@@ -29,6 +29,11 @@ ul{
   margin-bottom: 0px;
 }
 
+.social{
+  background-color: #3664a2;
+  z-index: 9999;
+}
+
 .loading{
   position: relative;
   width: 40px !important;
@@ -219,7 +224,14 @@ ul{
 .slider.closed {
 	max-height: 1000px;
 }
-
+@media (min-width: 769px) {
+  .social{
+    position: fixed;
+    width: 50px;
+    bottom: 70%;
+    left: 0px;
+  }
+}
 @media (max-width: 768px) {
   html{
     background-color: $bg_color;
@@ -228,6 +240,12 @@ ul{
     max-width: 100%;
     box-shadow: 0px 0px;
     border-radius: 0px;
+  }
+  .social{
+    position: absolute;
+    width: 45px;
+    top: 0px;
+    right: 0px;
   }
   .nav-bar-mobile{
     display: block;

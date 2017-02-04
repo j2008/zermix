@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'product')
+@section('title', 'Product ผลิตภัณฑ์ทั้งหมด')
 
 @section('header')
   <link rel="stylesheet" type="text/css" href="css/animations.css">
@@ -18,6 +18,7 @@
 
 	<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 	<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  <meta name="description" content="ผลิตภัณฑ์ ZERMIX HELIONOF MICELLAR บำรุงผิวหน้า กันแดด และทำความสะอาด">
 @endsection
 
 @section('content')

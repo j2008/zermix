@@ -1,11 +1,12 @@
 @extends('layout')
 
-@section('title', 'PR')
+@section('title', 'PR บทความประชาสัมพันธ์')
 
   @section('header')
     <script src="js/jssor.slider-22.1.6.min.js" type="text/javascript"></script>
     <script src="js/content.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="css/content.css">
+    <meta name="description" content="บทความประสัมพันธ์และแนะนำผลิตภัณฑ์จาก ZERMIX ">
   @endsection
 
   @section('content')

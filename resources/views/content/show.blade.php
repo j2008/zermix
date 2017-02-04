@@ -1,6 +1,8 @@
 @extends('layout')
 
-@section('title', 'Post')
+@section('title')
+  {{$post->title}}
+@endsection
 
 @section('header')
   <script src="/js/content.js" type="text/javascript"></script>
@@ -8,6 +10,12 @@
   <link rel="stylesheet" href="/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/css/owl.theme.default.min.css">
   <script src="/js/owl.carousel.min.js"></script>
+  @if(trim($post->meta_description) != "")
+    <meta name="description" content="{{$post->meta_description}}">
+  @endif
+  @if(trim($post->meta_keywords) != "")
+    <meta name="keywords" content="{{$post->meta_keywords}}">
+  @endif
 @endsection
 
 @section('content')

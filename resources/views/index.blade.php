@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/css/owl.theme.default.min.css">
   <script src="/js/owl.carousel.min.js"></script>
+  <meta name="description" content="ZERMIX กลุ่มผลิตภัณฑ์ดูแลผิวแห้ง ผิวบอบบาง ผิวแพ้ง่ายโดยเฉพาะ ผลิตภัณฑ์เซอร์มิกซ์ ได้รับการยอมรับจากผู้เชี่ยวชาญด้านผิวหนังมาแล้วกว่า 7 ปี ทั้งจากโรงพยาบาลรัฐ  โรงพยาบาลเอกชน และคลินิกผิวหนังทั่วประเทศไทย">
 @endsection
 
 @section('content')

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'About')
+@section('title', 'About เกี่ยวกับ ZERMIX')
 
 @section('content')
   <img class="" style="max-width:100%;" src="<?= Voyager::image($page->image) ?>" >

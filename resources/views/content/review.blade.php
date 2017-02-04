@@ -1,11 +1,12 @@
 @extends('layout')
 
-@section('title', 'User Review')
+@section('title', 'User Review บทความรีวิวจากผู้ใช้')
 
   @section('header')
     <script src="js/jssor.slider-22.1.6.min.js" type="text/javascript"></script>
     <script src="js/content.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="css/content.css">
+    <meta name="description" content="บทความรีวิว และทดสอบผลิตภัณฑ์ ZERMIX จากผู้ใช้จริง">
   @endsection
 
   @section('content')

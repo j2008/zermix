@@ -1,10 +1,11 @@
 @extends('layout')
 
-@section('title', 'Store')
+@section('title', 'Store สถานที่จำหน่าย')
 
 @section('header')
   <link rel="stylesheet" type="text/css" href="css/store.css">
   <script src="js/store.js" type="text/javascript" ></script>
+  <meta name="description" content="รวมสถานที่จำหน่ายผลิตภัณฑ์ ZERMIX มีแล้วที่ร้านขายยาชั้นนำ และร้านขายยาทั่วไปทั่วประเทศไทย">
 @endsection
 
 @section('content')

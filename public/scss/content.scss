@@ -278,6 +278,10 @@ h2{
 .jssorb01 .av:hover     (active mouseover)
 .jssorb01 .dn           (mousedown)
 */
+.item img{
+  max-width: 200px;
+  max-height: 200px;
+}
 .caption{
   position:absolute;
   bottom: 0px;

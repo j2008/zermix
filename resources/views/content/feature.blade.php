@@ -1,11 +1,12 @@
 @extends('layout')
 
-@section('title', 'Feature')
+@section('title', 'Feature บทความทั่วไป')
 
 @section('header')
   <script src="js/jssor.slider-22.1.6.min.js" type="text/javascript"></script>
   <script src="js/content.js" type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="css/content.css">
+  <meta name="description" content="บทความและสาระน่ารู้ เพื่อการบำรุงและรักษาสุขภาพผิว">
 @endsection
 
 @section('content')
