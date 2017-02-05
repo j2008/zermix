@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use TCG\Voyager\Models\DataType;
 use TCG\Voyager\Voyager;
+use Illuminate\Support\Str;
 
 class VoyagerBreadController extends Controller
 {
@@ -134,7 +135,14 @@ class VoyagerBreadController extends Controller
             $view = "voyager::$slug.edit-add";
         }
 
-        return view($view, compact('dataType', 'dataTypeContent'));
+        if($slug == "posts") {
+          $gallery_model = app("TCG\Voyager\Models\Gallery");
+          $galleries = $gallery_model->where('post_id',$id)->orderBy('id','desc')->get();
+          return view($view, compact('dataType', 'dataTypeContent','galleries'));
+        }
+        else {
+          return view($view, compact('dataType', 'dataTypeContent'));
+        }
     }
 
     // POST BR(E)AD
@@ -149,6 +157,25 @@ class VoyagerBreadController extends Controller
 
         $data = call_user_func([$dataType->model_name, 'findOrFail'], $id);
         $this->insertUpdateData($request, $slug, $dataType->editRows, $data);
+
+        // Addition Gallery on POST
+        if($slug == "posts") {
+          if ($files = $request->file('gallery')) {
+            foreach ($files as $file) {
+              $filename = Str::random(20);
+              $path = 'gallery/'.$id.'/';
+              $fullPath = $path.$filename.'.'.$file->getClientOriginalExtension();
+
+              $file->storeAs(config('voyager.storage.subfolder').$path, $filename.'.'.$file->getClientOriginalExtension());
+
+              $gallery = app("TCG\Voyager\Models\Gallery");
+              $new_gallery = new $gallery;
+              $new_gallery->post_id = $id;
+              $new_gallery->image = $fullPath;
+              $new_gallery->save();
+            }
+          }
+        }
 
         return redirect()
             ->route("voyager.{$dataType->slug}.index")
@@ -226,6 +253,16 @@ class VoyagerBreadController extends Controller
     //         Delete an item BREA(D)
     //
     //****************************************
+
+    public function delete_gallery(Request $request, $id)
+    {
+      $data = call_user_func(['TCG\Voyager\Models\Gallery', 'findOrFail'], $id);
+      if(file_exists($_SERVER['DOCUMENT_ROOT'].'/storage/'.$data->image)) {
+        unlink($_SERVER['DOCUMENT_ROOT']."/storage/".$data->image);
+        return $data->destroy($id);
+      }
+      return 'false';
+    }
 
     public function destroy(Request $request, $id)
     {

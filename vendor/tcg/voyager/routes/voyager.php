@@ -28,7 +28,7 @@ Route::group(['as' => 'voyager.'], function () {
         Route::get('upgrade', ['uses' => $namespacePrefix.'VoyagerUpgradeController@index', 'as' => 'upgrade']);
 
         Route::get('profile', ['uses' => $namespacePrefix.'VoyagerController@profile', 'as' => 'profile']);
-
+        Route::post('gallery/{id}/delete',['uses' => $namespacePrefix.'VoyagerBreadController@delete_gallery', 'as' => 'delete_gallery']);
         try {
             foreach (\TCG\Voyager\Models\DataType::all() as $dataTypes) {
                 Route::resource($dataTypes->slug, $namespacePrefix.'VoyagerBreadController');

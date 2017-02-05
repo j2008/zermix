@@ -2,6 +2,31 @@
 
 @section('css')
     <style>
+        .thumbnail{
+            height: 150px;
+            margin: 10px;
+        }
+        .preview-pic{
+            display: inline-block;
+            position: relative;
+        }
+        .remove-img{
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          border: 5px solid #6ac3c3;
+          background-color: black;
+          color: white;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          text-align: center;
+          line-height: 30px;
+          cursor: pointer;
+        }
+        .remove-img:hover{
+          background-color: red;
+        }
         .panel .mce-panel {
             border-left-color: #fff;
             border-right-color: #fff;
@@ -101,10 +126,45 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                          <textarea class="form-control" name="excerpt">@if (isset($dataTypeContent->excerpt)){{ $dataTypeContent->excerpt }}@endif</textarea>
+                          <textarea class="form-control" name="excerpt">@if(isset($dataTypeContent->excerpt)){{$dataTypeContent->excerpt}}@endif</textarea>
                         </div>
                     </div>
+
+                    <!-- ### GALLERY ### -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Gallery <small>Add image for this post here</small></h3>
+                            <div class="panel-actions">
+                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                          <div class="thumbnail-old">
+                            @if(isset($galleries) && count($galleries) > 0)
+                              @foreach($galleries as $gallery)
+                                <div class="preview-pic">
+                                  <img class="thumbnail" src="{{Voyager::image($gallery->image)}}" />
+                                  <div class="remove-img img-{{$gallery->id}}" onclick="removeImg({{$gallery->id}});">
+                                    X
+                                  </div>
+                                </div>
+                              @endforeach
+                            @else
+                              <h2>No image in this post.</h2>
+                            @endif
+                          </div>
+                        </div>
+                        <div class="panel-body">
+                          <div id="up-img">
+                            <input id="files" type="file" name="gallery[]" multiple/>
+                            <input type="button" value="Clear all preview image" onclick="clearSelection();" />
+                          </div>
+                          <output id="result" />
+                        </div>
+                    </div>
+
                 </div>
+
                 <div class="col-md-4">
                     <!-- ### DETAILS ### -->
                     <div class="panel panel panel-bordered panel-warning">
@@ -205,4 +265,71 @@
 @section('javascript')
     <script src="{{ config('voyager.assets_path') }}/lib/js/tinymce/tinymce.min.js"></script>
     <script src="{{ config('voyager.assets_path') }}/js/voyager_tinymce.js"></script>
+
+    <script type="text/javascript">
+
+      function clearSelection() {
+          document.getElementById("files").value = "";
+          document.getElementById("result").innerHTML = null;
+      }
+
+      function removeImg(image){
+        $.ajax({
+            type: 'POST',
+            url: '/admin/gallery/'+image+'/delete',
+            success: function(msg){
+              $will_delete = document.getElementsByClassName("img-"+image)[0].parentNode;
+              $will_delete.innerHTML = null;
+            }
+        });
+      }
+
+      window.onload = function(){
+
+          //Check File API support
+          if(window.File && window.FileList && window.FileReader)
+          {
+              var filesInput = document.getElementById("files");
+
+              filesInput.addEventListener("change", function(event){
+
+                  var files = event.target.files; //FileList object
+                  var output = document.getElementById("result");
+
+                  for(var i = 0; i< files.length; i++)
+                  {
+                      var file = files[i];
+
+                      //Only pics
+                      if(!file.type.match('image'))
+                        continue;
+
+                      var picReader = new FileReader();
+
+                      picReader.addEventListener("load",function(event){
+
+                          var picFile = event.target;
+
+                          var div = document.createElement("div");
+                          div.className += "preview-pic";
+
+                          div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
+                                  "title='" + picFile.name + "'/>";
+
+                          output.insertBefore(div,null);
+
+                      });
+
+                       //Read the image
+                      picReader.readAsDataURL(file);
+                  }
+
+              });
+          }
+          else
+          {
+              console.log("Your browser does not support File API");
+          }
+      }
+    </script>
 @stop
