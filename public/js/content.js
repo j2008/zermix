@@ -59,7 +59,7 @@ jssor_1_slider_init = function() {
 
     var jssor_1_options = {
       $AutoPlay: true,
-      $Idle: 4000000,
+      $Idle: 4000,
       $CaptionSliderOptions: {
         $Class: $JssorCaptionSlideo$,
         $Transitions: jssor_1_SlideoTransitions,
