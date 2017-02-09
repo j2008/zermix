@@ -335,11 +335,13 @@ class ComposerStaticInitf588d0454e5dad2dfa102466308cb77b
     public static $classMap = array (
         'AddNameThToCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_14_115254_add_name_th_to_categories_table.php',
         'AddOrderToPostsTable' => __DIR__ . '/../..' . '/database/migrations/2017_01_31_145628_add_order_to_posts_table.php',
+        'AddPageviewToPostsTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_08_142320_add_pageview_to_posts_table.php',
         'AddUserAvatar' => __DIR__ . '/../..' . '/database/migrations/2016_01_01_000000_add_user_avatar.php',
         'AddUserRole' => __DIR__ . '/../..' . '/database/migrations/2016_11_30_131710_add_user_role.php',
         'CategoriesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoriesTableSeeder.php',
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2016_02_15_204651_create_categories_table.php',
         'CreateDataTypesTable' => __DIR__ . '/../..' . '/database/migrations/2016_01_01_000000_create_data_types_table.php',
+        'CreateGalleryTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_05_152655_create_gallery_table.php',
         'CreateMenuTable' => __DIR__ . '/../..' . '/database/migrations/2016_05_19_173453_create_menu_table.php',
         'CreatePagesTable' => __DIR__ . '/../..' . '/database/migrations/2016_01_01_000000_create_pages_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

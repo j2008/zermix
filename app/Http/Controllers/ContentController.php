@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Category;
+use Illuminate\Support\Facades\DB;
 
 class ContentController extends Controller
 {
@@ -37,10 +38,14 @@ class ContentController extends Controller
   {
     //Use Eloquent (Can use relation model but eat more resource)
     $post = Post::where('id',$id)->where('status','PUBLISHED')->get();
+    DB::table('posts')->where('id',$id)->increment('pageview');
+    $gallery_model = app("TCG\Voyager\Models\Gallery");
+    $galleries = $gallery_model->where('post_id',$id)->orderBy('id','desc')->get();
+
     if (count($post) >= 1) {
       $post = $post[0];
       $related_posts = Post::where('category_id',$post->category_id)->where('status','PUBLISHED')->get();
-      return view('content.show',compact('post','related_posts'));
+      return view('content.show',compact('post','related_posts','galleries'));
     }
     else return view('errors.404');
   }

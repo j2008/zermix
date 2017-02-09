@@ -1,3 +1,20 @@
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1868948223390373',
+    xfbml      : true,
+    version    : 'v2.8'
+  });
+  FB.AppEvents.logPageView();
+};
+
+(function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+
 $(document).ready(function(){
   $('.type-choice li').on('click',function(){
     var class_name = $(this).attr("class").substring(0,$(this).attr("class").length-5);
@@ -6,9 +23,31 @@ $(document).ready(function(){
     $('.selected-type').html('<p><b>'+class_name+' news</b></p>');
     $( ".lists" ).css('display','none');
     $('.'+class_name+"-content").fadeIn(500);
-  })
+  });
+
+  var url = "https://graph.facebook.com/?id="+window.location;
+  $.getJSON(url, function(data) {
+    if (typeof data['share'] !== 'undefined' && data['share']['share_count'] > 0) {
+      share_num = data['share']['share_count'];
+      $('.share_num').html(share_num);
+    }
+    else {
+      $('.share_num').html(0);
+    }
+  });
+
+  document.getElementById('shareBtn').onclick = function() {
+    FB.ui({
+      method: 'share',
+      display: 'popup',
+      href: window.location,
+    }, function(response){});
+  }
 })
 
+function focusImg (link){
+  $('.main_img').attr('src',link);
+}
 
 jssor_1_slider_init = function() {
 
@@ -20,7 +59,7 @@ jssor_1_slider_init = function() {
 
     var jssor_1_options = {
       $AutoPlay: true,
-      $Idle: 4000,
+      $Idle: 4000000,
       $CaptionSliderOptions: {
         $Class: $JssorCaptionSlideo$,
         $Transitions: jssor_1_SlideoTransitions,
