@@ -25,7 +25,7 @@ $(document).ready(function(){
     $('.'+class_name+"-content").fadeIn(500);
   });
 
-  var url = "https://graph.facebook.com/?id="+window.location;
+  var url = "https://graph.facebook.com/?id="+document.location.href;
   $.getJSON(url, function(data) {
     if (typeof data['share'] !== 'undefined' && data['share']['share_count'] > 0) {
       share_num = data['share']['share_count'];
@@ -40,7 +40,7 @@ $(document).ready(function(){
     FB.ui({
       method: 'share',
       display: 'popup',
-      href: window.location,
+      href: document.location.href,
     }, function(response){});
   }
 })
