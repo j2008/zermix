@@ -52,7 +52,13 @@
                 <img class="logo-img" src="{{ Voyager::image($admin_logo_img) }}" alt="Logo Icon">
             @endif
           </div>
-          <a href="https://web.facebook.com/zermix.zermix" target="_blank"><img class="social" src="/img/facebook icon.png" /></a>
+
+          <div class="social-layout">
+            <a href="https://web.facebook.com/zermix.zermix" target="_blank"><img class="social social-fb" src="/img/facebook-icon.png" /></a>
+            <a href="" target="_blank" onclick="alert('coming soon!'); return false;"><img class="social social-ig" src="/img/ig-icon.png" /></a>
+            <a href="" target="_blank" onclick="alert('coming soon!'); return false;"><img class="social social-line" src="/img/line-icon.png" /></a>
+          </div>
+
           <img class="top-bar" src="{{ asset('/img/topbar.png') }}" alt="top bar" >
           <div class="nav-bar">
             <ul>
