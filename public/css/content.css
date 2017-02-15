@@ -1,6 +1,17 @@
 h2 {
   font-size: 21px;
 }
+.ads {
+  max-width: 290px;
+  margin: 10px 0px 10px 5px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.ads img {
+  width: 290px;
+  height: 290px;
+}
 .item img {
   max-width: 200px;
 }
@@ -197,7 +208,7 @@ h2 {
   .content-text {
     max-width: 80%;
   }
-  .content-text img {
+  .content-text .main_img {
     max-width: 700px;
     max-height: 500px;
     margin-bottom: 10px;
@@ -230,7 +241,7 @@ h2 {
   .content-text {
     max-width: 90%;
   }
-  .content-text img {
+  .content-text .main_img {
     max-width: 80%;
     margin: 5px;
   }

@@ -39,13 +39,25 @@ class ContentController extends Controller
     //Use Eloquent (Can use relation model but eat more resource)
     $post = Post::where('id',$id)->where('status','PUBLISHED')->get();
     DB::table('posts')->where('id',$id)->increment('pageview');
+
+    //gallery of this post
     $gallery_model = app("TCG\Voyager\Models\Gallery");
     $galleries = $gallery_model->where('post_id',$id)->orderBy('id','desc')->get();
 
     if (count($post) >= 1) {
       $post = $post[0];
+
+      //related post with same category
       $related_posts = Post::where('category_id',$post->category_id)->where('status','PUBLISHED')->get();
-      return view('content.show',compact('post','related_posts','galleries'));
+
+      //ads
+      $ads_model = app("TCG\Voyager\Models\Ads");
+      $ads = $ads_model->inRandomOrder()->get();
+      if (count($ads) >= 1) {
+        $ads = $ads[0];
+        return view('content.show',compact('post','related_posts','galleries','ads'));
+      }
+      else return view('content.show',compact('post','related_posts','galleries'));
     }
     else return view('errors.404');
   }

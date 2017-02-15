@@ -29,6 +29,11 @@
     <div class="content-text">
       <div style="text-align: center;">
         <img class="main_img" src="/storage/<?= $post->image; ?>" />
+        @if (isset($ads) && count($ads) > 0)
+          <div class="ads">
+            <a href="{{$ads->url}}" target="_blank"><img src="{{Voyager::image($ads->image)}}" /></a>
+          </div>
+        @endif
       </div>
       @if(isset($galleries) && count($galleries) > 0)
         <div style="other-gallery">

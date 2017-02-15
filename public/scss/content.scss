@@ -7,6 +7,18 @@ h2{
   font-size: 21px;
 }
 
+.ads{
+  max-width: 290px;
+  margin: 10px 0px 10px 5px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  img{
+    width: 290px;
+    height: 290px;
+  }
+}
+
 .item{
   img{
     max-width: 200px;
@@ -226,7 +238,7 @@ h2{
 @media (min-width : 769px)  {
   .content-text{
     max-width: 80%;
-    img{
+    .main_img{
       max-width: 700px;
       max-height: 500px;
       margin-bottom: 10px;
@@ -261,7 +273,7 @@ h2{
 @media (max-width : 768px)  {
   .content-text{
     max-width: 90%;
-    img{
+    .main_img{
       max-width: 80%;
       margin: 5px;
     }
