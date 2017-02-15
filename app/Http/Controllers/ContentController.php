@@ -51,7 +51,7 @@ class ContentController extends Controller
       $related_posts = Post::where('category_id',$post->category_id)->where('status','PUBLISHED')->get();
 
       //ads
-      $ads_model = app("TCG\Voyager\Models\Ads");
+      $ads_model = app("TCG\Voyager\Models\ads");
       $ads = $ads_model->inRandomOrder()->get();
       if (count($ads) >= 1) {
         $ads = $ads[0];
