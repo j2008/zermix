@@ -339,6 +339,7 @@ class ComposerStaticInitf588d0454e5dad2dfa102466308cb77b
         'AddUserAvatar' => __DIR__ . '/../..' . '/database/migrations/2016_01_01_000000_add_user_avatar.php',
         'AddUserRole' => __DIR__ . '/../..' . '/database/migrations/2016_11_30_131710_add_user_role.php',
         'CategoriesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoriesTableSeeder.php',
+        'ChangePageviewDafaultInPostsTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_17_141808_change_pageview_dafault_in_posts_table.php',
         'CreateAdsTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_15_160858_create_ads_table.php',
         'CreateCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2016_02_15_204651_create_categories_table.php',
         'CreateDataTypesTable' => __DIR__ . '/../..' . '/database/migrations/2016_01_01_000000_create_data_types_table.php',
