@@ -12,6 +12,7 @@ return array(
     'AddUserAvatar' => $baseDir . '/database/migrations/2016_01_01_000000_add_user_avatar.php',
     'AddUserRole' => $baseDir . '/database/migrations/2016_11_30_131710_add_user_role.php',
     'CategoriesTableSeeder' => $baseDir . '/database/seeds/CategoriesTableSeeder.php',
+    'ChangeOrderDafaultAndPageviewInPostsTable' => $baseDir . '/database/migrations/2017_02_17_145546_change_order_dafault_and_pageview_in_posts_table.php',
     'ChangePageviewDafaultInPostsTable' => $baseDir . '/database/migrations/2017_02_17_141808_change_pageview_dafault_in_posts_table.php',
     'CreateAdsTable' => $baseDir . '/database/migrations/2017_02_15_160858_create_ads_table.php',
     'CreateCategoriesTable' => $baseDir . '/database/migrations/2016_02_15_204651_create_categories_table.php',
