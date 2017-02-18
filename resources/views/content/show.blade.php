@@ -16,6 +16,7 @@
   @if(trim($post->meta_keywords) != "")
     <meta name="keywords" content="{{$post->meta_keywords}}">
   @endif
+  <meta property="og:image" content="https://www.zermix.com/storage/<?= $post->image; ?>" />
 @endsection
 
 @section('content')
