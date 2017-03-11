@@ -138,19 +138,29 @@
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
             <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a>
             <div data-p="225.00" style="display:none;">
+              <a href="<?= Voyager::setting('pickup_slide_url') ?>">
                 <img data-u="image" src="<?= Voyager::image('slideshow/Banner1.png') ?>" />
+              </a>
             </div>
             <div data-p="225.00" style="display:none;">
-                <img data-u="image" src="<?= Voyager::image('slideshow/Banner2.png') ?>" />
+                <a href="<?= Voyager::setting('pickup_slide_url') ?>">
+                  <img data-u="image" src="<?= Voyager::image('slideshow/Banner2.png') ?>" />
+                </a>
             </div>
             <div data-p="225.00" style="display:none;">
-                <img data-u="image" src="<?= Voyager::image('slideshow/Banner3.png') ?>" />
+                <a href="<?= Voyager::setting('pickup_slide_url') ?>">
+                  <img data-u="image" src="<?= Voyager::image('slideshow/Banner3.png') ?>" />
+                </a>
             </div>
             <div data-p="225.00" style="display:none;">
-                <img data-u="image" src="<?= Voyager::image('slideshow/Banner4.png') ?>" />
+                <a href="<?= Voyager::setting('pickup_slide_url') ?>">
+                  <img data-u="image" src="<?= Voyager::image('slideshow/Banner4.png') ?>" />
+                </a>
             </div>
             <div data-p="225.00" style="display:none;">
-                <img data-u="image" src="<?= Voyager::image('slideshow/Banner5.png') ?>" />
+                <a href="<?= Voyager::setting('pickup_slide_url') ?>">
+                  <img data-u="image" src="<?= Voyager::image('slideshow/Banner5.png') ?>" />
+                </a>
             </div>
         </div>
         <!-- Bullet Navigator -->
