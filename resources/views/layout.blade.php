@@ -69,9 +69,10 @@
           </div>
 
           <div class="social-layout">
-            <a href="https://web.facebook.com/zermix.zermix" target="_blank"><img class="social social-fb" src="/img/facebook-icon.png" /></a>
-            <a href="" target="_blank" onclick="alert('coming soon!'); return false;"><img class="social social-ig" src="/img/ig-icon.png" /></a>
-            <a href="" target="_blank" onclick="alert('coming soon!'); return false;"><img class="social social-line" src="/img/line-icon.png" /></a>
+            <a href="https://www.facebook.com/zermixThailand/?fref=ts" target="_blank"><img class="social social-fb" src="/img/facebook-icon.png" /></a>
+            <a href="https://www.facebook.com/heionofThailand/?fref=ts" target="_blank"><img class="social social-fb2" src="/img/facebook-icon2.png" /></a>
+            <a href="https://www.instagram.com/zermix_thailand/" target="_blank"><img class="social social-ig" src="/img/ig-icon.png" /></a>
+            <a href="line://ti/p/@sat2651a" target="_blank"><img class="social social-line" src="/img/line-icon.png" /></a>
           </div>
 
           <img class="top-bar" src="{{ asset('/img/topbar.png') }}" alt="top bar" >

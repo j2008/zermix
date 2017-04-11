@@ -21,6 +21,9 @@ ul {
 .social-fb {
   background-color: #3664a2;
 }
+.social-fb2 {
+  background-color: #76cdd8;
+}
 .social-ig {
   background-color: #000;
 }
@@ -256,7 +259,7 @@ ul {
   }
   .social-layout {
     position: absolute;
-    width: 145px;
+    width: 195px;
     left: 52%;
     top: 0px;
     -webkit-transform: translate(-50%, 0);
