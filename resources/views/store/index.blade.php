@@ -10,6 +10,7 @@
 
 @section('content')
   <div class="map">
+    <!--
     <div class="map-title"><span class="title-h2"><h2>คลิกที่แผนที่เพื่อเลือกภาค</h2></span></div>
     <img src="img/map.png" usemap="#map">
     <map name="map">
@@ -22,5 +23,6 @@
       <area shape="poly" coords="95,495,42,647,199,781,259,757,137,587,108,585,119,495,95,495" onClick="openMap('south')" />
     </map>
     <div class="store-detail"></div>
+    -->
   </div>
 @endsection

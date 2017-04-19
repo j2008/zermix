@@ -18,3 +18,14 @@ function openMap(id) {
     $('html,body').animate({scrollTop:$( ".store-detail" ).offset().top-10}, 500);
   });
 }
+
+function loadContent() {
+  $.each([ 'bangkok', 'east' , 'south', 'center' , 'north', 'north-east' , 'west' ], function( index, value ) {
+    $.get( "/store/"+value, function( data ) {
+      $( ".map" ).append( "<div class='store-detail'>"+data+"</div>" );
+      $( ".store-detail" ).css( 'display','inline-block' );
+    });
+  });
+}
+
+loadContent();
