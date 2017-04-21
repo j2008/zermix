@@ -20,10 +20,10 @@ function openMap(id) {
 }
 
 function loadContent() {
-  $.each([ 'bangkok', 'east' , 'south', 'center' , 'north', 'north-east' , 'west' ], function( index, value ) {
+  $.each([ 'bangkok', 'center' , 'east' ,'north-east' , 'south', 'west', 'north' ], function( index, value ) {
     $.get( "/store/"+value, function( data ) {
-      $( ".map" ).append( "<div class='store-detail'>"+data+"</div>" );
-      $( ".store-detail" ).css( 'display','inline-block' );
+      $( ".map-"+value ).append( data );
+      $( ".map-"+value ).css( 'display','inline-block' );
     });
   });
 }

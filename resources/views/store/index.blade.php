@@ -24,5 +24,12 @@
     </map>
     <div class="store-detail"></div>
     -->
+    <div class='store-detail map-bangkok'></div>
+    <div class='store-detail map-center'></div>
+    <div class='store-detail map-east'></div>
+    <div class='store-detail map-north-east'></div>
+    <div class='store-detail map-south'></div>
+    <div class='store-detail map-west'></div>
+    <div class='store-detail map-north'></div>
   </div>
 @endsection
