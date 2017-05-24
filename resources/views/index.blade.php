@@ -172,6 +172,11 @@
         <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
     </div>
+    <div style="background-color: #211e1e;">
+      <div class="video-home">
+        <iframe src="https://www.youtube.com/embed/a_NoiaqcX-E" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
     <div style="text-align:center;"><h2>Our Product</h2></div>
     <div style="border:1px solid #e3e3ec; margin:10px auto; width: 70%;" ></div>
     <div class="owl-carousel owl-theme">
@@ -182,5 +187,5 @@
         </div>
       @endforeach
     </div>
-    <div style="border-top:1px solid #e3e3ec; margin:10px auto; width: 100%;" ></div>
+    <!-- <div style="border-top:1px solid #e3e3ec; margin:10px auto; width: 100%;" ></div> -->
 @endsection
