@@ -14,7 +14,7 @@ $(document).ready(function(){
     n = 0;
     $(".keyword").css("background-color","white");
     try {
-        $('html,body').animate({scrollTop:$("td:contains('"+$(".keyword").val()+"'):eq(0)").offset().top-10}, 500);
+        $('html,body').animate({scrollTop:$(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").offset().top-10}, 500);
     }
     catch(err) {
         $(".keyword").css("background-color","#f1d5d5");
@@ -26,7 +26,7 @@ function next_find(){
   n++;
   console.log("555");
   try {
-      $('html,body').animate({scrollTop:$("td:contains('"+$(".keyword").val()+"'):eq("+n+")").offset().top-10}, 500);
+      $('html,body').animate({scrollTop:$("td:contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").offset().top-10}, 500);
   }
   catch(err) {
       $(".keyword").css("background-color","#f1d5d5");
