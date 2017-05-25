@@ -1,6 +1,37 @@
-$(document).ready(function(){
+var n = 0;
 
+$(document).ready(function(){
+  $("body").on("click",".close-button",function(){
+    $('.finding').fadeOut(500);
+  })
+  $("body").on("click",".background",function(){
+    $('.finding').fadeOut(500);
+  })
+  $("body").on("click",".open-button",function(){
+    $('.finding').fadeIn(500);
+  })
+  $("body").on("input",".keyword",function(){
+    n = 0;
+    $(".keyword").css("background-color","white");
+    try {
+        $('html,body').animate({scrollTop:$("td:contains('"+$(".keyword").val()+"'):eq(0)").offset().top-10}, 500);
+    }
+    catch(err) {
+        $(".keyword").css("background-color","#f1d5d5");
+    }
+  })
 })
+
+function next_find(){
+  n++;
+  console.log("555");
+  try {
+      $('html,body').animate({scrollTop:$("td:contains('"+$(".keyword").val()+"'):eq("+n+")").offset().top-10}, 500);
+  }
+  catch(err) {
+      $(".keyword").css("background-color","#f1d5d5");
+  }
+}
 
 var first = true;
 
@@ -17,6 +48,10 @@ function openMap(id) {
     $( ".store-detail" ).css( 'display','inline-block' );
     $('html,body').animate({scrollTop:$( ".store-detail" ).offset().top-10}, 500);
   });
+}
+
+function region_select(id) {
+  $('html,body').animate({scrollTop:$( ".map-"+id ).offset().top-10}, 500);
 }
 
 function loadContent() {

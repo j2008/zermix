@@ -32,4 +32,29 @@
     <div class='store-detail map-west'></div>
     <div class='store-detail map-north'></div>
   </div>
+
+  <div class="finding">
+    <div class="background"></div>
+    <div class="close-button">X</div>
+    <div class="search-bar">
+      <h3 style="color:white;text-align:center;">เลือกภาคที่ต้องการ<h3>
+      <div class="region">
+        <div class="region-bangkok" onClick="region_select('bangkok')">กทม</div>
+        <div class="region-center" onClick="region_select('center')">กลาง</div>
+        <div class="region-east" onClick="region_select('east')">ออก</div>
+        <div class="region-north-east" onClick="region_select('north-east')">อีสาน</div>
+        <div class="region-south" onClick="region_select('south')">ใต้</div>
+        <div class="region-west" onClick="region_select('west')">ตก</div>
+        <div class="region-north" onClick="region_select('north')">เหนือ</div>
+      </div>
+      <div class="search-keyword">
+        <h3 style="color:white;text-align:center;">พิมพ์หาสถานที่ เช่น ห้าง,เขต,จังหวัด<h3>
+        <input type="text" name="keyword" class="keyword" />
+        <button onclick="next_find();">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <img class="open-button" src="/img/finding.png">
+
 @endsection
