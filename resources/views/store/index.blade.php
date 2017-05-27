@@ -52,6 +52,11 @@
         <input type="text" name="keyword" class="keyword" style="width: 200px;" />
         <button onclick="find('prev');">Prev</button>
         <button onclick="find('next');">Next</button>
+        <div style="color:white">
+          <p class="current_n" style="display:inline-block">0</p>
+          /
+          <p class="total_n" style="display:inline-block">0</p>
+        </div>
       </div>
     </div>
   </div>
