@@ -49,12 +49,17 @@
       </div>
       <div class="search-keyword">
         <h3 style="color:white;text-align:center;">พิมพ์หาสถานที่ เช่น ห้าง,เขต,จังหวัด<h3>
-        <input type="text" name="keyword" class="keyword" />
-        <button onclick="next_find();">Next</button>
+        <input type="text" name="keyword" class="keyword" style="width: 200px;" />
+        <button onclick="find('prev');">Prev</button>
+        <button onclick="find('next');">Next</button>
       </div>
     </div>
   </div>
 
-  <img class="open-button" src="/img/finding.png">
+  <div class="find-layout">
+    <img class="up-button" onclick="find('prev');" src="/img/up.png">
+    <img class="open-button" src="/img/finding.png">
+    <img class="down-button" onclick="find('next');" src="/img/down.png">
+  </div>
 
 @endsection

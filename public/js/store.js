@@ -10,26 +10,34 @@ $(document).ready(function(){
   $("body").on("click",".open-button",function(){
     $('.finding').fadeIn(500);
   })
-  $("body").on("input",".keyword",function(){
+  $("body").on("keyup",".keyword",throttle(function(){
     n = 0;
     $(".keyword").css("background-color","white");
+    $(".hightlight").removeClass( "hightlight" );
     try {
-        $('html,body').animate({scrollTop:$(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").offset().top-10}, 500);
+        $('html,body').animate({scrollTop:$(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").offset().top-20}, 500);
+        $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").addClass( "hightlight" );
     }
     catch(err) {
         $(".keyword").css("background-color","#f1d5d5");
+        console.log(err);
     }
-  })
+  }))
 })
 
-function next_find(){
-  n++;
-  console.log("555");
-  try {
-      $('html,body').animate({scrollTop:$("td:contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").offset().top-10}, 500);
-  }
-  catch(err) {
-      $(".keyword").css("background-color","#f1d5d5");
+function find(direction){
+  if($(".keyword").val() != ""){
+    if(direction == "next") n++;
+    else n--;
+    try {
+        $('html,body').animate({scrollTop:$(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").offset().top-20}, 500);
+        $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").addClass( "hightlight" );
+        console.log(n);
+    }
+    catch(err) {
+        $(".keyword").css("background-color","#f1d5d5");
+        console.log(err);
+    }
   }
 }
 
@@ -61,6 +69,18 @@ function loadContent() {
       $( ".map-"+value ).css( 'display','inline-block' );
     });
   });
+}
+
+function throttle(f, delay){
+    var timer = null;
+    return function(){
+        var context = this, args = arguments;
+        clearTimeout(timer);
+        timer = window.setTimeout(function(){
+            f.apply(context, args);
+        },
+        delay || 500);
+    };
 }
 
 loadContent();

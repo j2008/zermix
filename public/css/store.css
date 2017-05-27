@@ -86,6 +86,23 @@
   box-shadow: 0px 0px 10px 2px #76cdd8;
   cursor: pointer;
 }
+.find-layout {
+  position: fixed;
+  top: 85%;
+  right: 10px;
+  width: 65px;
+  text-align: center;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.up-button, .down-button {
+  width: 50px;
+  margin: 5px 0px;
+  cursor: pointer;
+}
 .close-button {
   width: 50px;
   height: 50px;
@@ -105,9 +122,6 @@
 .open-button {
   width: 65px;
   height: 65px;
-  position: fixed;
-  bottom: 20px;
-  right: 10px;
 }
 .open-button:hover {
   opacity: 0.7;
@@ -115,6 +129,10 @@
 }
 .search-keyword {
   text-align: center;
+}
+.hightlight {
+  background-color: #ff0;
+  padding: 3px;
 }
 .background {
   width: 100%;
