@@ -18,7 +18,8 @@ $(document).ready(function(){
       $(".keyword").css("background-color","white");
       $(".hightlight").removeClass( "hightlight" );
       try {
-          $('html,body').animate({scrollTop:$(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").offset().top-20}, 500);
+          $current = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").closest("p");
+          $('html,body').animate({scrollTop:$current.offset().top-30}, 500);
           $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").addClass( "hightlight" );
           max_n = $(":contains('"+$(".keyword").val()+"'):not(:has(*))").length
           if($(".keyword").val() == "") {
@@ -28,6 +29,19 @@ $(document).ready(function(){
           else{
             $(".current_n").html(n+1);
             $(".total_n").html(max_n);
+          }
+          var $prev = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").closest("p").prev("p");
+          var $next = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").closest("p").next("p");
+          console.log("prev : "+$prev.children().length+" strong : "+$prev.children('strong').length);
+          console.log("next : "+$next.children().length+" strong : "+$next.children('strong').length);
+
+          if(!$current.children('strong').length > 0){
+            if($prev.children().length > 1 && $prev.children('strong').length > 0){
+              $prev.addClass( "hightlight" );
+            }
+            if($next.children().length > 1 && $next.children('strong').length > 0){
+              $next.addClass( "hightlight" );
+            }
           }
       }
       catch(err) {
@@ -50,10 +64,27 @@ function find(direction){
     if(direction == "next" && n < max_n-1) n++;
     else if(direction == "prev" && n > 0) n--;
     try {
-        $('html,body').animate({scrollTop:$(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").offset().top-20}, 500);
+        $current = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").closest("p");
+        $('html,body').animate({scrollTop:$current.offset().top-30}, 500);
         $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").addClass( "hightlight" );
         $(".current_n").html(n+1);
         console.log(n);
+        var $prev = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").closest("p").prev("p");
+        var $next = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").closest("p").next("p");
+        console.log("prev : "+$prev.children().length+" strong : "+$prev.children('strong').length);
+        console.log("next : "+$next.children().length+" strong : "+$next.children('strong').length);
+        console.log("prev : "+$prev.html());
+        console.log("next : "+$next.html());
+        console.log("current : "+$current.children('strong').length)
+
+        if(!$current.children('strong').length > 0){
+          if($prev.children().length > 1 && $prev.children('strong').length > 0){
+            $prev.addClass( "hightlight" );
+          }
+          if($next.children().length > 1 && $next.children('strong').length > 0){
+            $next.addClass( "hightlight" );
+          }
+        }
     }
     catch(err) {
         $(".keyword").css("background-color","#f1d5d5");
