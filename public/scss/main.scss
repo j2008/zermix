@@ -308,10 +308,16 @@ ul{
     }
   }
 }
+@media (max-width: 468px) {
+  .video-home{
+    width: 100% !important;
+  }
+}
 .video-home{
   position:relative;
-  max-width: 720px;
+  width: 49.5%;
   margin: auto;
+  display: inline-block;
   iframe{
     width: 100%;
     //max-width: 720px;
