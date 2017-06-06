@@ -57,6 +57,19 @@ $(document).ready(function(){
       find("next");
     }
   })
+
+  var _originalSize = $(window).width() + $(window).height()
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $(window).resize(function(){
+      if($(window).width() + $(window).height() != _originalSize){
+        console.log("keyboard show up");
+        $(".search-bar").addClass("keyboard");
+      }else{
+        console.log("keyboard closed");
+        $(".search-bar").removeClass("keyboard");
+      }
+    });
+  }
 })
 
 function find(direction){
