@@ -32,8 +32,8 @@ $(document).ready(function(){
           }
           var $prev = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").closest("p").prev("p");
           var $next = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq(0)").closest("p").next("p");
-          console.log("prev : "+$prev.children().length+" strong : "+$prev.children('strong').length);
-          console.log("next : "+$next.children().length+" strong : "+$next.children('strong').length);
+          // console.log("prev : "+$prev.children().length+" strong : "+$prev.children('strong').length);
+          // console.log("next : "+$next.children().length+" strong : "+$next.children('strong').length);
 
           if(!$current.children('strong').length > 0){
             if($prev.children().length > 1 && $prev.children('strong').length > 0){
@@ -63,10 +63,10 @@ $(document).ready(function(){
     $(".search-bar").addClass("mobile");
     $(window).resize(function(){
       if(_originalSize - $(window).height() > _originalSize*0.25 ){
-        console.log("keyboard show up");
+        // console.log("keyboard show up");
         $(".search-bar").addClass("keyboard");
       }else{
-        console.log("keyboard closed");
+        // console.log("keyboard closed");
         $(".search-bar").removeClass("keyboard");
       }
     });
@@ -82,14 +82,14 @@ function find(direction){
         $('html,body').animate({scrollTop:$current.offset().top-30}, 500);
         $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").addClass( "hightlight" );
         $(".current_n").html(n+1);
-        console.log(n);
+        // console.log(n);
         var $prev = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").closest("p").prev("p");
         var $next = $(":contains('"+$(".keyword").val()+"'):not(:has(*)):eq("+n+")").closest("p").next("p");
-        console.log("prev : "+$prev.children().length+" strong : "+$prev.children('strong').length);
-        console.log("next : "+$next.children().length+" strong : "+$next.children('strong').length);
-        console.log("prev : "+$prev.html());
-        console.log("next : "+$next.html());
-        console.log("current : "+$current.children('strong').length)
+        // console.log("prev : "+$prev.children().length+" strong : "+$prev.children('strong').length);
+        // console.log("next : "+$next.children().length+" strong : "+$next.children('strong').length);
+        // console.log("prev : "+$prev.html());
+        // console.log("next : "+$next.html());
+        // console.log("current : "+$current.children('strong').length)
 
         if(!$current.children('strong').length > 0){
           if($prev.children().length > 1 && $prev.children('strong').length > 0){
