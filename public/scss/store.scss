@@ -147,7 +147,7 @@
 
 .background{
   width: 100%;
-  height: 100%;
+  height: 120%;
   top:0;
   left:0;
   position: fixed;
@@ -212,8 +212,11 @@
 }
 
 .keyboard{
-  top:40% !important;
   zoom: 0.8; /* Other non-webkit browsers */
   zoom: 80%; /* Webkit browsers */
   transition: all 1s ease-in-out;
+}
+
+.mobile{
+  top:40% !important;
 }

@@ -60,6 +60,7 @@ $(document).ready(function(){
 
   var _originalSize = $(window).height()
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $(".search-bar").addClass("mobile");
     $(window).resize(function(){
       if(_originalSize - $(window).height() > _originalSize*0.25 ){
         console.log("keyboard show up");
