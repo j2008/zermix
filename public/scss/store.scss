@@ -212,5 +212,8 @@
 }
 
 .keyboard{
-  top:20% !important;
+  top:40% !important;
+  zoom: 0.8; /* Other non-webkit browsers */
+  zoom: 80%; /* Webkit browsers */
+  transition: all 1s ease-in-out;
 }

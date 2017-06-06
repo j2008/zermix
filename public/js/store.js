@@ -58,10 +58,10 @@ $(document).ready(function(){
     }
   })
 
-  var _originalSize = $(window).width() + $(window).height()
+  var _originalSize = $(window).height()
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     $(window).resize(function(){
-      if($(window).width() + $(window).height() != _originalSize){
+      if(_originalSize - $(window).height() > _originalSize*0.25 ){
         console.log("keyboard show up");
         $(".search-bar").addClass("keyboard");
       }else{
