@@ -179,6 +179,9 @@
       <div class="video-home">
         <iframe src="https://www.youtube.com/embed/stwMXERLquk" frameborder="0" allowfullscreen></iframe>
       </div>
+      <div class="video-home">
+        <iframe src="https://www.youtube.com/embed/kzbdYaPd1uY" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
     <div style="text-align:center;"><h2>Our Product</h2></div>
     <div style="border:1px solid #e3e3ec; margin:10px auto; width: 70%;" ></div>

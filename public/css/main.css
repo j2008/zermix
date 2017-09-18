@@ -292,14 +292,14 @@ ul {
     text-align: center;
   }
 }
-@media (max-width: 468px) {
+@media (max-width: 810px) {
   .video-home {
     width: 100% !important;
   }
 }
 .video-home {
   position: relative;
-  width: 49.5%;
+  width: 33%;
   margin: auto;
   display: inline-block;
 }
