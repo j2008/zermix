@@ -38,8 +38,20 @@
         <!-- End Facebook Pixel Code -->
     </head>
     <body>
+        <div class="overlay"></div>
+        <div class="popup">
+          <div class="close-popup">X</div>
+          <img src="{{ asset('/img/popup_500x500px.jpg') }}" />
+        </div>
         <!-- header -->
         <div class="header-top">
+          <div class="color-switch">
+            <div class="switch-text">สีปกติ</div>
+            <label class="switch">
+            <input id="color-switch" type="checkbox">
+            <span class="slider-toggle round"></span>
+            </label>
+          </div>
           <div class="nav-bar-mobile">
             <img class="mobile-menu" src="/img/mobile-menu.png" >
             <ul class="mobile-list slider" id="slider">

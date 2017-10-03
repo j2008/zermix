@@ -34,7 +34,7 @@ ul{
 }
 
 .social-layout{
-  z-index: 9999;
+  z-index: 99;
 }
 
 .social-fb{
@@ -88,6 +88,7 @@ ul{
 .header-top{
   text-align: center;
   width: 100%;
+  position:relative;
 
   .nav-bar{
     margin: 10px 0px 0px 0px;
@@ -291,6 +292,10 @@ ul{
   .nav-bar{
     display: none;
   }
+  .color-switch{
+    right: auto !important;
+    left: 60px;
+  }
   .top-bar {
     margin-bottom: 10px;
     height: 10px;
@@ -329,4 +334,111 @@ ul{
   padding-top: 56.5%;
   display: block;
   content: "";
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch-text{
+  display: inline-block;
+  vertical-align: top;
+  line-height: 28px;
+}
+
+.color-switch{
+  position: absolute;
+  right: 15px;
+  z-index:1;
+  padding-top: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider-toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider-toggle:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider-toggle {
+  background-color: #2196F3;
+}
+
+input:focus + .slider-toggle {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider-toggle:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider-toggle.round {
+  border-radius: 28px;
+}
+
+.slider-toggle.round:before {
+  border-radius: 50%;
+}
+
+.overlay{
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.5);
+  z-index:999;
+  position: fixed;
+  left: 0;
+  display:none;
+}
+
+.popup{
+  display:none;
+  width:500px;
+  max-width:100%;
+  margin:auto;
+  position:fixed;
+  top:50%;
+  left:50%;
+  z-index: 9999;
+  transform: translate(-50%,-50%);
+  img{
+    width:100%;
+    height:100%;
+  }
+  .close-popup{
+    position: absolute;
+    z-index: 9999;
+    font-size: 40px;
+    color: white;
+    font-family: cursive;
+    right: 15px;
+    cursor: pointer;
+  }
 }
