@@ -18,6 +18,10 @@ $(document).ready(function(){
 	  } else {
 	    $("html").css("filter","grayscale(80%)"); 
 	  }
+	  if(location.pathname == "/store"){
+		$("html").css("filter","none");
+		$("#color-switch").prop('checked', true);
+	  }
 	},200);
 
 	//change mode
@@ -43,6 +47,12 @@ $(document).ready(function(){
 		$('.overlay').fadeOut();
 		setCookie("popup","1",365)
 	})
+
+	//firefox bug fix
+	if (navigator.userAgent.search("Firefox") > -1) {
+		var pix_height = $(window).height()/2;
+		$('.popup').css("top",pix_height+"px");
+	}
 })
 
 function getCookie(cname) {
