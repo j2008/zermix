@@ -1,3 +1,4 @@
+/*
 $(document).ready(function(){
 	$('.mobile-menu').on('click',function(){
 	document.getElementById('slider').classList.toggle('closed');
@@ -76,3 +77,4 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+*/
