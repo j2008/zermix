@@ -1,8 +1,10 @@
-/*
+
 $(document).ready(function(){
 	$('.mobile-menu').on('click',function(){
-	document.getElementById('slider').classList.toggle('closed');
+		document.getElementById('slider').classList.toggle('closed');
 	})
+
+	/*
 
   	//get lastest setting from cookie
 	if ( getCookie("color_mode") == 1 ) {
@@ -54,6 +56,8 @@ $(document).ready(function(){
 		var pix_height = $(window).height()/2;
 		$('.popup').css("top",pix_height+"px");
 	}
+
+	*/
 })
 
 function getCookie(cname) {
@@ -77,4 +81,3 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-*/
