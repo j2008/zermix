@@ -27,6 +27,7 @@ return array(
     'CreateRolesTable' => $baseDir . '/database/migrations/2016_10_21_190000_create_roles_table.php',
     'CreateSettingsTable' => $baseDir . '/database/migrations/2016_10_21_190000_create_settings_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
+    'CreateVideoTable' => $baseDir . '/database/migrations/2018_03_25_120356_create_video_table.php',
     'DataRowsTableSeeder' => $baseDir . '/database/seeds/DataRowsTableSeeder.php',
     'DataTypesAddServerSide' => $baseDir . '/database/migrations/2016_12_26_201236_data_types__add__server_side.php',
     'DataTypesTableSeeder' => $baseDir . '/database/seeds/DataTypesTableSeeder.php',

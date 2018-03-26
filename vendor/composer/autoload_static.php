@@ -354,6 +354,7 @@ class ComposerStaticInitf588d0454e5dad2dfa102466308cb77b
         'CreateRolesTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_21_190000_create_roles_table.php',
         'CreateSettingsTable' => __DIR__ . '/../..' . '/database/migrations/2016_10_21_190000_create_settings_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
+        'CreateVideoTable' => __DIR__ . '/../..' . '/database/migrations/2018_03_25_120356_create_video_table.php',
         'DataRowsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/DataRowsTableSeeder.php',
         'DataTypesAddServerSide' => __DIR__ . '/../..' . '/database/migrations/2016_12_26_201236_data_types__add__server_side.php',
         'DataTypesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/DataTypesTableSeeder.php',
