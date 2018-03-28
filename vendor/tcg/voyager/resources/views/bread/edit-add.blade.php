@@ -59,7 +59,7 @@
                                     @if($row->type == "text")
                                         <input type="text" class="form-control" name="{{ $row->field }}"
                                                placeholder="{{ $row->display_name }}"
-                                               value="@if(isset($dataTypeContent->{$row->field})){{ old($row->field, $dataTypeContent->{$row->field}) }}@else{{old($row->field)}}@endif">
+                                               value="@if(isset($dataTypeContent->{$row->field})){{ old($row->field, $dataTypeContent->{$row->field}) }}@elseif($row->details == 'default=0'){{0}}@else{{ old($row->field) }}@endif">
                                     @elseif($row->type == "password")
                                         @if(isset($dataTypeContent->{$row->field}))
                                             <br>
