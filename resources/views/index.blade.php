@@ -7,13 +7,15 @@
   <link rel="stylesheet" href="/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/css/owl.theme.default.min.css">
   <script src="/js/owl.carousel.min.js"></script>
-  <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
-  <link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
+  <script src="/js/video.js"></script>
+  <script src="/js/videojs-titleoverlay.js"></script>
+  <link href="/css/video-js.css" rel="stylesheet">
   <meta name="description" content="ZERMIX กลุ่มผลิตภัณฑ์ดูแลผิวแห้ง ผิวบอบบาง ผิวแพ้ง่ายโดยเฉพาะ ผลิตภัณฑ์เซอร์มิกซ์ ได้รับการยอมรับจากผู้เชี่ยวชาญด้านผิวหนังมาแล้วกว่า 7 ปี ทั้งจากโรงพยาบาลรัฐ  โรงพยาบาลเอกชน และคลินิกผิวหนังทั่วประเทศไทย">
 @endsection
 
 @section('content')
   <script type="text/javascript">
+
       jQuery(document).ready(function ($) {
           $('.owl-carousel').owlCarousel({
               loop:true,
@@ -188,7 +190,7 @@
       <!-- video home page -->
       @if (count($videos))
         @foreach ($videos as $video)
-          <video id="my-video" class="video-js video-home" controls preload="auto"
+          <video id="video-{{$video->id}}" class="video-js video-home" controls preload="auto"
           poster="/storage/{{$video->video_cover}}" data-setup="{}">
             <source src="/storage/{{$video->url}}" type='video/mp4'>
             <p class="vjs-no-js">
@@ -196,6 +198,14 @@
               <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
             </p>
           </video>
+
+          <script>
+            var player = videojs('video-{{$video->id}}');
+            var options = {
+              title: '{{$video->title}}'
+            };
+            player.titleoverlay(options);
+          </script>
         @endforeach
       @endif
     </div>
