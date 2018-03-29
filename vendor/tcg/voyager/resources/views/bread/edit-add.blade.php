@@ -80,6 +80,7 @@
                                             <div class="fileType">{{ $dataTypeContent->{$row->field} }}</div>
                                         @endif
                                         <input type="file" name="{{ $row->field }}">
+                                        <p> File size must less then 100MB </p>
                                     @elseif($row->type == "select_dropdown")
                                         <?php $options = json_decode($row->details); ?>
                                         @if(isset($options->relationship))

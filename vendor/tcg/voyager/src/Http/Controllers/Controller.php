@@ -50,6 +50,7 @@ abstract class Controller extends BaseController
             }
 
             $content = $this->getContentBasedOnType($request, $slug, $row);
+            if (empty($content)) continue;
 
             if (is_null($content)) {
                 if (isset($data->{$row->field})) {

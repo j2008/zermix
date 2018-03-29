@@ -20,6 +20,7 @@ class CreateVideoTable extends Migration
           $table->string('page')->nullable();
           $table->boolean('active')->default(true);
           $table->string('url');
+          $table->string('video_cover')->nullable();
           $table->timestamps();
       });
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use TCG\Voyager\Models\Video;
 
 class IndexController extends Controller
 {
@@ -19,7 +20,8 @@ class IndexController extends Controller
            ->select('posts.*', 'categories.parent_id')
            ->where('categories.parent_id',3)->orderBy('posts.order','ASC')
            ->get();
-      return view('index',compact('posts'));
+      $videos = Video::where('page','HOME')->get();
+      return view('index',compact('posts','videos'));
     }
 
     /**

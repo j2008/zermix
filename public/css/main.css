@@ -306,7 +306,8 @@ ul {
   position: relative;
   width: 33%;
   margin: auto;
-  display: inline-block;
+  display: inline-block !important;
+  height: auto;
 }
 .video-home iframe {
   width: 100%;
