@@ -180,6 +180,15 @@
 
       <!-- video home page -->
       @if (count($videos))
+        <div class="video-home wt33">
+          <iframe src="https://www.youtube.com/embed/a_NoiaqcX-E" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-home wt33">
+          <iframe src="https://www.youtube.com/embed/stwMXERLquk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-home wt33">
+          <iframe src="https://www.youtube.com/embed/kzbdYaPd1uY" frameborder="0" allowfullscreen></iframe>
+        </div>
         @foreach ($videos as $video)
           <video id="video-{{$video->id}}" class="video-js video-home wt33" controls preload="auto"
           poster="/storage/{{$video->video_cover}}" data-setup="{}">
