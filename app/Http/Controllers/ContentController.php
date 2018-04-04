@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Category;
+use TCG\Voyager\Models\Video;
 use Illuminate\Support\Facades\DB;
 
 class ContentController extends Controller
@@ -47,17 +48,31 @@ class ContentController extends Controller
     if (count($post) >= 1) {
       $post = $post[0];
 
-      //related post with same category
-      $related_posts = Post::where('category_id',$post->category_id)->where('status','PUBLISHED')->get();
+      $product_cats = array(3, 4, 5, 6);
+      if( in_array($post->category_id, $product_cats) ) {
+        $is_product = true;
+      } else {
+        $is_product = false;
+      }
+
+      if( $is_product ) {
+        //related product post with all product category
+        $related_posts = Post::whereIn('category_id', $product_cats )->where('status','PUBLISHED')->get();
+      } else {
+        //related content post with same category
+        $related_posts = Post::where('category_id',$post->category_id)->where('status','PUBLISHED')->get();
+      }
+
+      $videos = Video::where('page','PRODUCT')->where('post_id',$post->id)->get();
 
       //ads
       $ads_model = app("TCG\Voyager\Models\ads");
       $ads = $ads_model->inRandomOrder()->get();
       if (count($ads) >= 1) {
         $ads = $ads[0];
-        return view('content.show',compact('post','related_posts','galleries','ads'));
+        return view('content.show',compact('post','related_posts','galleries','ads','is_product','videos'));
       }
-      else return view('content.show',compact('post','related_posts','galleries'));
+      else return view('content.show',compact('post','related_posts','galleries','is_product','videos'));
     }
     else return view('errors.404');
   }

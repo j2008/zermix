@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/css/owl.theme.default.min.css">
   <script src="/js/owl.carousel.min.js"></script>
+  <script src="/js/video.js"></script>
+  <script src="/js/videojs-titleoverlay.js"></script>
+  <link href="/css/video-js.css" rel="stylesheet">
   @if(trim($post->meta_description) != "")
     <meta name="description" content="{{$post->meta_description}}">
   @endif
@@ -36,6 +39,7 @@
           </div>
         @endif
       </div>
+
       @if(isset($galleries) && count($galleries) > 0)
         <div style="other-gallery">
           <div class="owl-carousel owl-theme owl-gallery">
@@ -46,8 +50,35 @@
           </div>
         </div>
       @endif
+
+      <!-- VIDEO SECTION -->
+      @if (!empty($videos))
+        <div class="center">
+          @foreach ($videos as $video)
+            <video id="video-{{$video->id}}" class="video-js video-home wt50" controls preload="auto"
+            poster="/storage/{{$video->video_cover}}" data-setup="{}">
+              <source src="/storage/{{$video->url}}" type='video/mp4'>
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+            </video>
+
+            <script>
+              var player = videojs('video-{{$video->id}}');
+              var options = {
+                title: '{{$video->title}}'
+              };
+              player.titleoverlay(options);
+            </script>
+          @endforeach
+        @endif
+      </div>
+
+      <!-- BODY CONTENT OF POST -->
       <?= $post->body; ?>
     </div>
+
     @if (isset($related_posts))
       <div class="recommend">
         <h2>บทความที่เกี่ยวข้อง Related Article</h2>

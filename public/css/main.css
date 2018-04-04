@@ -12,6 +12,15 @@ body {
 ul {
   margin-bottom: 0px;
 }
+.center {
+  text-align: center;
+}
+.wt33 {
+  width: 33%;
+}
+.wt50 {
+  width: 50%;
+}
 .social {
   position: relative;
 }
@@ -304,7 +313,6 @@ ul {
 }
 .video-home {
   position: relative;
-  width: 33%;
   margin: auto;
   display: inline-block !important;
   height: auto;

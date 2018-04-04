@@ -35,24 +35,28 @@
   <!-- product list -->
   <div class="all-product product">
     @foreach ($posts as $post)
-      <div class="post animate" onclick="loadDetail({{$post->id}});">
+    <a href="/post/{{$post->id}}" target="_blank">
+      <div class="post animate" onclick="//loadDetail({{$post->id}});">
         <div>
           <img src="/storage/{{$post->image}}" />
           <p>{{$post->title}}</p>
         </div>
       </div>
+    </a>
     @endforeach
   </div>
   @foreach ($categories as $category)
     <div class="{{$category->name}}-product product">
       @foreach ($posts as $post)
         @if($post->category_id == $category->id)
-          <div class="post animate" onclick="loadDetail({{$post->id}});">
-            <div>
-              <img src="/storage/{{$post->image}}" />
-              <p>{{$post->title}}</p>
+          <a href="/post/{{$post->id}}" target="_blank">
+            <div class="post animate" onclick="//loadDetail({{$post->id}});">
+              <div>
+                <img src="/storage/{{$post->image}}" />
+                <p>{{$post->title}}</p>
+              </div>
             </div>
-          </div>
+          </a>
         @endif
       @endforeach
     </div>

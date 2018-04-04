@@ -176,21 +176,12 @@
         <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
     </div>
-    <div style="padding:5px 0px">
-      <div class="video-home">
-        <iframe src="https://www.youtube.com/embed/a_NoiaqcX-E" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="video-home">
-        <iframe src="https://www.youtube.com/embed/stwMXERLquk" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="video-home">
-        <iframe src="https://www.youtube.com/embed/kzbdYaPd1uY" frameborder="0" allowfullscreen></iframe>
-      </div>
+    <div style="padding:5px 0px; text-align:center; ">
 
       <!-- video home page -->
       @if (count($videos))
         @foreach ($videos as $video)
-          <video id="video-{{$video->id}}" class="video-js video-home" controls preload="auto"
+          <video id="video-{{$video->id}}" class="video-js video-home wt33" controls preload="auto"
           poster="/storage/{{$video->video_cover}}" data-setup="{}">
             <source src="/storage/{{$video->url}}" type='video/mp4'>
             <p class="vjs-no-js">
@@ -207,6 +198,16 @@
             player.titleoverlay(options);
           </script>
         @endforeach
+      @else
+        <div class="video-home wt33">
+          <iframe src="https://www.youtube.com/embed/a_NoiaqcX-E" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-home wt33">
+          <iframe src="https://www.youtube.com/embed/stwMXERLquk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-home wt33">
+          <iframe src="https://www.youtube.com/embed/kzbdYaPd1uY" frameborder="0" allowfullscreen></iframe>
+        </div>
       @endif
     </div>
     
