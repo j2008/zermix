@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use TCG\Voyager\Models\Video;
+use TCG\Voyager\Models\video;
 
 class IndexController extends Controller
 {

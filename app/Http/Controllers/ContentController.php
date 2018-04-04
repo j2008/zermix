@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Category;
-use TCG\Voyager\Models\Video;
+use TCG\Voyager\Models\video;
 use Illuminate\Support\Facades\DB;
 
 class ContentController extends Controller
