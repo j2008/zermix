@@ -28,6 +28,10 @@ Route::get('/feature', ['uses' => 'ContentController@feature', 'as' => '/feature
 Route::get('/pr', ['uses' => 'ContentController@pr', 'as' => '/pr']);
 Route::get('/review', ['uses' => 'ContentController@review', 'as' => '/review']);
 Route::get('/post/{id}', ['uses' => 'ContentController@show', 'as' => '/post/{id}']);
+Route::get('qr-code', function () 
+{
+    return  QRCode::text('http://www.zermix.com')->setSize(10)->setOutfile(storage_path('app/public/qr_code/').'test1.png')->png();
+}); 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
