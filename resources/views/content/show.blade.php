@@ -72,12 +72,15 @@
               player.titleoverlay(options);
             </script>
           @endforeach
-        @endif
-      </div>
+        </div>
+      @endif
 
       <!-- BODY CONTENT OF POST -->
       <?= $post->body; ?>
     </div>
+
+    <!-- QR CODE -->
+    <img class="qr_code" src="{{$qr_path}}" />
 
     @if (isset($related_posts))
       <div class="recommend">

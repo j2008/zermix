@@ -7,6 +7,7 @@ use TCG\Voyager\Models\Post;
 use TCG\Voyager\Models\Category;
 use TCG\Voyager\Models\video;
 use Illuminate\Support\Facades\DB;
+use LaravelQRCode\Facades\QRCode;
 
 class ProductController extends Controller
 {
@@ -91,16 +92,18 @@ class ProductController extends Controller
             $related_posts = Post::where('category_id',$post->category_id)->where('status','PUBLISHED')->get();
           }
 
-          $videos = Video::where('page','PRODUCT')->where('post_id',$post->id)->get();
+          // QR CODE
+          QRCode::text('http://www.zermix.com/product/'.$slug)->setSize(10)->setOutfile(storage_path('app/public/qr_code/').$slug.'.png')->png();
+          $qr_path = '/storage/qr_code/'.$slug.'.png';
 
           //ads
           $ads_model = app("TCG\Voyager\Models\ads");
           $ads = $ads_model->inRandomOrder()->get();
           if (count($ads) >= 1) {
             $ads = $ads[0];
-            return view('content.show',compact('post','related_posts','galleries','ads','is_product','videos'));
+            return view('content.show',compact('post','related_posts','galleries','ads','is_product','videos','qr_path'));
           }
-          else return view('content.show',compact('post','related_posts','galleries','is_product','videos'));
+          else return view('content.show',compact('post','related_posts','galleries','is_product','videos','qr_path'));
         }
         else return view('errors.404');
     }
