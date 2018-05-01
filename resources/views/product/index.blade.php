@@ -35,7 +35,7 @@
   <!-- product list -->
   <div class="all-product product">
     @foreach ($posts as $post)
-    <a href="/post/{{$post->id}}" target="_blank">
+    <a href="/product/{{$post->slug}}">
       <div class="post animate" onclick="//loadDetail({{$post->id}});">
         <div>
           <img src="/storage/{{$post->image}}" />
@@ -49,7 +49,7 @@
     <div class="{{$category->name}}-product product">
       @foreach ($posts as $post)
         @if($post->category_id == $category->id)
-          <a href="/post/{{$post->id}}" target="_blank">
+          <a href="/product/{{$post->slug}}">
             <div class="post animate" onclick="//loadDetail({{$post->id}});">
               <div>
                 <img src="/storage/{{$post->image}}" />

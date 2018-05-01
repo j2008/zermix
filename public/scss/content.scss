@@ -8,14 +8,13 @@ h2{
 }
 
 .ads{
-  max-width: 290px;
+  max-width: 400px;
   margin: 10px 0px 10px 5px;
   position: relative;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   img{
-    width: 290px;
-    height: 290px;
+    max-width: 100%;
   }
 }
 
