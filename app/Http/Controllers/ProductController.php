@@ -74,7 +74,7 @@ class ProductController extends Controller
 
         if (count($post) >= 1) {
           $post = $post[0];
-          
+
           DB::table('posts')->where('id',$post->id)->increment('pageview');
           $galleries = $gallery_model->where('post_id',$post->id)->orderBy('id','desc')->get();
 
@@ -94,7 +94,9 @@ class ProductController extends Controller
           }
 
           // QR CODE
-          QRCode::text('http://www.zermix.com/product/'.$slug)->setSize(10)->setOutfile(storage_path('app/public/qr_code/').$slug.'.png')->png();
+          if (!file_exists(storage_path('app/public/qr_code/').$slug.'.png')) {
+            QRCode::text('http://www.zermix.com/product/'.$slug)->setSize(10)->setOutfile(storage_path('app/public/qr_code/').$slug.'.png')->png();
+          }  
           $qr_path = '/storage/qr_code/'.$slug.'.png';
 
           //ads
