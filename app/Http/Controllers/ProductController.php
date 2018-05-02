@@ -68,14 +68,15 @@ class ProductController extends Controller
     {
         //Use Eloquent (Can use relation model but eat more resource)
         $post = Post::where('slug',$slug)->where('status','PUBLISHED')->get();
-        DB::table('posts')->where('id',$post[0]->id)->increment('pageview');
 
         //gallery of this post
         $gallery_model = app("TCG\Voyager\Models\Gallery");
-        $galleries = $gallery_model->where('post_id',$post[0]->id)->orderBy('id','desc')->get();
 
         if (count($post) >= 1) {
           $post = $post[0];
+          
+          DB::table('posts')->where('id',$post->id)->increment('pageview');
+          $galleries = $gallery_model->where('post_id',$post->id)->orderBy('id','desc')->get();
 
           $product_cats = array(3, 4, 5, 6);
           if( in_array($post->category_id, $product_cats) ) {
