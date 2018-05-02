@@ -18,7 +18,7 @@ class IndexController extends Controller
       $posts = DB::table('posts')
            ->join('categories', 'posts.category_id', '=', 'categories.id')
            ->select('posts.*', 'categories.parent_id')
-           ->where('categories.parent_id',3)->orderBy('posts.order','ASC')
+           ->where('categories.parent_id',3)->where('status','PUBLISHED')->orderBy('posts.order','ASC')
            ->get();
       $videos = Video::where('page','HOME')->get();
       return view('index',compact('posts','videos'));

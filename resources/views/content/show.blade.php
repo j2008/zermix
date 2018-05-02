@@ -80,7 +80,9 @@
     </div>
 
     <!-- QR CODE -->
-    <img class="qr_code" src="{{$qr_path}}" />
+    @if (isset($qr_path))
+      <img class="qr_code" src="{{$qr_path}}" />
+    @endif
 
     @if (isset($related_posts))
       <div class="recommend">
