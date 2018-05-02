@@ -55,7 +55,6 @@ $normal_type_border_color: #e5e1ea;
     li{
       display: inline-block;
       margin: 0% 0.1%;
-      width: 23%;
       height: 40px;
       line-height: 40px;
       vertical-align: top;
@@ -107,6 +106,13 @@ $normal_type_border_color: #e5e1ea;
       max-height: 300px;
     }
   }
+  .product-list{
+    ul{
+      li{
+        padding: 0px 50px;
+      }
+    }
+  }
 }
 @media (max-width: 1024px) {
   .post{
@@ -148,6 +154,7 @@ $normal_type_border_color: #e5e1ea;
     ul{
       li{
         font-size: 8px;
+        padding: 0px 15px;
       }
     }
   }
