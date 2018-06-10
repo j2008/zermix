@@ -20,7 +20,7 @@ class IndexController extends Controller
            ->select('posts.*', 'categories.parent_id')
            ->where('categories.parent_id',3)->where('status','PUBLISHED')->orderBy('posts.order','ASC')
            ->get();
-      $videos = Video::where('page','HOME')->get();
+      $videos = Video::where('page','HOME')->where('active',1)->get();
       return view('index',compact('posts','videos'));
     }
 

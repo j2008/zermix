@@ -63,7 +63,7 @@ class ContentController extends Controller
         $related_posts = Post::where('category_id',$post->category_id)->where('status','PUBLISHED')->get();
       }
 
-      $videos = Video::where('page','PRODUCT')->where('post_id',$post->id)->get();
+      $videos = Video::where('page','PRODUCT')->where('post_id',$post->id)->where('active',1)->get();
 
       //ads
       $ads_model = app("TCG\Voyager\Models\ads");

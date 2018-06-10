@@ -99,6 +99,9 @@ class ProductController extends Controller
           }  
           $qr_path = '/storage/qr_code/'.$slug.'.png';
 
+          //video
+          $videos = Video::where('page','PRODUCT')->where('post_id',$post->id)->where('active',1)->get();
+
           //ads
           $ads_model = app("TCG\Voyager\Models\ads");
           $ads = $ads_model->inRandomOrder()->get();
