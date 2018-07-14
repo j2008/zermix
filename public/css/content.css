@@ -193,6 +193,9 @@ h2 {
   border-left: 2px solid #9b9ca7;
   border-right: 2px solid #9b9ca7;
 }
+.content-text img{
+   max-width: 100%;
+}
 .post-body {
   text-align: center;
   border-bottom: 1px solid #eae6e6;
