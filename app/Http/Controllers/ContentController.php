@@ -68,7 +68,7 @@ class ContentController extends Controller
       //ads
       $ads_model = app("TCG\Voyager\Models\ads");
       $ads = $ads_model->inRandomOrder()->get();
-      if (count($ads) >= 1) {
+      if (is_array($ads) && count($ads) >= 1) {
         $ads = $ads[0];
         return view('content.show',compact('post','related_posts','galleries','ads','is_product','videos'));
       }

@@ -33,14 +33,14 @@
     <div class="content-text">
       <div style="text-align: center;">
         <img class="main_img" src="/storage/<?= $post->image; ?>" />
-        @if (isset($ads) && count($ads) > 0)
+        @if (isset($ads) && is_array($ads) && count($ads) > 0)
           <div class="ads">
             <a href="{{$ads->url}}" target="_blank"><img src="{{Voyager::image($ads->image)}}" /></a>
           </div>
         @endif
       </div>
 
-      @if(isset($galleries) && count($galleries) > 0)
+      @if(isset($galleries) && is_array($galleries) && count($galleries) > 0)
         <div style="other-gallery">
           <div class="owl-carousel owl-theme owl-gallery">
             <img src="{{Voyager::image($post->image)}}" onclick="focusImg(this.src)" />
